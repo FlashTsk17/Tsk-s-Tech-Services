@@ -49,11 +49,14 @@
   .pf-thumb { aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; position: relative; }
   .pf-card.featured .pf-thumb { aspect-ratio: 2/1; }
   .pf-thumb span.pf-icon { font-size: 3.2rem; filter: drop-shadow(0 4px 12px rgba(0,0,0,.2)); }
-  .pf-1 .pf-thumb { background: linear-gradient(150deg, var(--violet), var(--violet-deep)); }
-  .pf-2 .pf-thumb { background: linear-gradient(150deg, var(--gold), var(--gold-deep)); }
-  .pf-3 .pf-thumb { background: linear-gradient(150deg, #B23A6B, #7A2148); }
-  .pf-4 .pf-thumb { background: linear-gradient(150deg, #007A6B, #004F45); }
-  .pf-5 .pf-thumb { background: linear-gradient(150deg, var(--violet-strong), var(--gold-deep)); }
+  /* Câblage image : chaque carte tente .jpg puis .png puis .webp, et retombe sur le dégradé
+     si aucun fichier n'existe encore. Dépose simplement le bon fichier dans /images/portfolio/
+     avec le nom exact ci-dessous — aucune modif de code nécessaire, l'image apparaît seule. */
+  .pf-1 .pf-thumb { background-image: url('../images/portfolio/bibliotech.jpg'), url('../images/portfolio/bibliotech.png'), url('../images/portfolio/bibliotech.webp'), linear-gradient(150deg, var(--violet), var(--violet-deep)); background-size: cover, cover, cover, cover; background-position: center, center, center, center; background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; }
+  .pf-2 .pf-thumb { background-image: url('../images/portfolio/mary-stella-couture.jpg'), url('../images/portfolio/mary-stella-couture.png'), url('../images/portfolio/mary-stella-couture.webp'), linear-gradient(150deg, var(--gold), var(--gold-deep)); background-size: cover, cover, cover, cover; background-position: center, center, center, center; background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; }
+  .pf-3 .pf-thumb { background-image: url('../images/portfolio/juliette-cosmetics.jpg'), url('../images/portfolio/juliette-cosmetics.png'), url('../images/portfolio/juliette-cosmetics.webp'), linear-gradient(150deg, #B23A6B, #7A2148); background-size: cover, cover, cover, cover; background-position: center, center, center, center; background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; }
+  .pf-4 .pf-thumb { background-image: url('../images/portfolio/my-personality.jpg'), url('../images/portfolio/my-personality.png'), url('../images/portfolio/my-personality.webp'), linear-gradient(150deg, #007A6B, #004F45); background-size: cover, cover, cover, cover; background-position: center, center, center, center; background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; }
+  .pf-5 .pf-thumb { background-image: url('../images/portfolio/celebrations-link.jpg'), url('../images/portfolio/celebrations-link.png'), url('../images/portfolio/celebrations-link.webp'), linear-gradient(150deg, var(--violet-strong), var(--gold-deep)); background-size: cover, cover, cover, cover; background-position: center, center, center, center; background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; }
   .pf-status { position: absolute; top: .9rem; right: .9rem; font-size: .64rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: .28rem .65rem; border-radius: 100px; background: rgba(255,255,255,.92); color: #170F2E; }
   .pf-body { padding: 1.5rem 1.6rem 1.7rem; flex: 1; display: flex; flex-direction: column; }
   .pf-tags { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: .8rem; }
@@ -93,6 +96,7 @@
     .pf-card.featured { grid-column: span 1; }
   }
 </style>
+<!-- VERCEL ANALYTICS : coller ici le script fourni par Vercel une fois Analytics activé (Dashboard Vercel > Projet > Analytics > Enable) -->
 </head>
 <body>
 
@@ -225,8 +229,8 @@
               <span class="pf-tag" data-fr="Cosmétiques" data-en="Cosmetics">Cosmétiques</span>
             </div>
             <h3>Juliette's Cosmetics</h3>
-            <p data-fr="Site vitrine élégant pour une marque de cosmétiques basée au Togo, avec catalogue produits et animations soignées." data-en="Elegant showcase site for a Togo-based cosmetics brand, with product catalog and refined animations.">
-              Site vitrine élégant pour une marque de cosmétiques basée au Togo, avec catalogue produits et animations soignées.
+            <p data-fr="Site vitrine élégant pour une marque de cosmétiques, avec catalogue produits et animations soignées." data-en="Elegant showcase site for a cosmetics brand, with product catalog and refined animations.">
+              Site vitrine élégant pour une marque de cosmétiques, avec catalogue produits et animations soignées.
             </p>
             <div class="pf-meta">
               <span class="pf-client" data-fr="Client Cosmétiques" data-en="Cosmetics Client">Client Cosmétiques</span>
@@ -379,6 +383,10 @@
     <span><span data-fr="Fondé par " data-en="Founded by ">Fondé par </span><strong>Tsadok Adido</strong></span>
   </div>
 </footer>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Retour en haut de page">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 
 <script src="../js/global.js"></script>
 <script>
