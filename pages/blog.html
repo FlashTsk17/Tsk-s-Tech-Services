@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Le blog de Tsk's Tech Services — actualités du studio, programme Tsk Tremplin, conseils tech, cybersécurité, design et opportunités pour étudiants et entrepreneurs."/>
+<title>Blog — Tsk's Tech Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"/>
+<link rel="stylesheet" href="../css/global.css"/>
+<link rel="canonical" href="https://flashtsk17.github.io/tsks-tech-services/pages/blog.html"/>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tsk's Tech Services"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:title" content="Blog — Tsk's Tech Services"/>
+<meta property="og:description" content="Actualités du studio, programme Tsk Tremplin, conseils tech, cybersécurité, design et opportunités pour étudiants et entrepreneurs."/>
+<meta property="og:url" content="https://flashtsk17.github.io/tsks-tech-services/pages/blog.html"/>
+<meta property="og:image" content="https://flashtsk17.github.io/tsks-tech-services/images/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Blog — Tsk's Tech Services"/>
+<meta name="twitter:description" content="Actualités du studio, programme Tsk Tremplin, conseils tech, cybersécurité, design et opportunités pour étudiants et entrepreneurs."/>
+<meta name="twitter:image" content="https://flashtsk17.github.io/tsks-tech-services/images/og-image.png"/>
+<style>
+  /* ═══════════════════════ HERO ═══════════════════════ */
+  .page-hero {
+    min-height: 42vh; display: flex; align-items: flex-end;
+    padding: calc(var(--nav-h) + 3.5rem) 4rem 3rem;
+    position: relative; overflow: hidden;
+  }
+  .page-hero-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+  .page-breadcrumb { display: flex; gap: .5rem; align-items: center; font-size: .78rem; font-weight: 500; color: var(--text-soft); margin-bottom: 1.3rem; }
+  .page-breadcrumb a { color: var(--cyan); }
+  .page-hero h1 { font-family: var(--font); font-weight: 800; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.05; letter-spacing: -.01em; margin-bottom: 1rem; }
+  .page-hero p { color: var(--text-muted); font-size: 1.02rem; line-height: 1.75; max-width: 560px; }
+
+  /* ═══════════════════════ HUB TSK TREMPLIN ═══════════════════════ */
+  .tremplin-hub { padding: 1rem 4rem 0; }
+  .tremplin-hub-inner {
+    max-width: var(--max-w); margin: 0 auto; position: relative; overflow: hidden;
+    border-radius: var(--radius-lg); padding: 3rem;
+    background: linear-gradient(135deg, var(--violet) 0%, var(--violet-deep) 100%);
+    box-shadow: var(--shadow-lg);
+  }
+  .tremplin-hub-inner::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--gold), #fff, var(--cyan));
+    opacity: .6;
+  }
+  .tremplin-hub-glow { position: absolute; top: -80px; right: -80px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(240,165,0,.25) 0%, transparent 70%); pointer-events: none; }
+  .tremplin-badge {
+    display: inline-flex; align-items: center; gap: .5rem; font-size: .74rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; color: #FFE8B8;
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.25);
+    padding: .4rem 1rem; border-radius: 100px; margin-bottom: 1.2rem;
+  }
+  .tremplin-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+  .tremplin-hub h2 { font-family: var(--font); font-weight: 800; font-size: clamp(1.6rem, 3vw, 2.1rem); color: #fff; margin-bottom: .3rem; }
+  .tremplin-hub h2 .accent { color: var(--gold-pale); }
+  .tremplin-tagline { font-size: .84rem; font-weight: 600; letter-spacing: .04em; color: #D9CCFF; margin-bottom: 1.2rem; }
+  .tremplin-desc { color: rgba(255,255,255,.82); line-height: 1.75; font-size: .95rem; max-width: 640px; margin-bottom: 2rem; }
+
+  .phase-tracker { display: flex; align-items: flex-start; gap: 0; margin-bottom: 2.2rem; max-width: 720px; overflow-x: auto; }
+  .phase-step { flex: 1; min-width: 104px; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; }
+  .phase-step:not(:last-child)::after { content: ''; position: absolute; top: 17px; left: 55%; right: -45%; height: 1.5px; background: rgba(255,255,255,.2); }
+  .phase-step.active:not(:last-child)::after { background: linear-gradient(90deg, var(--gold), rgba(255,255,255,.2)); }
+  .phase-dot {
+    width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: .75rem; font-weight: 700; background: rgba(255,255,255,.08); border: 1.5px solid rgba(255,255,255,.3);
+    color: rgba(255,255,255,.7); position: relative; z-index: 1; margin-bottom: .55rem;
+  }
+  .phase-step.active .phase-dot { background: var(--gold); border-color: var(--gold); color: #170F2E; box-shadow: 0 0 0 4px rgba(240,165,0,.2); }
+  .phase-name { font-family: var(--font); font-size: .74rem; font-weight: 700; color: rgba(255,255,255,.75); margin-bottom: .1rem; }
+  .phase-step.active .phase-name { color: #fff; }
+  .phase-weeks { font-size: .64rem; color: rgba(255,255,255,.5); letter-spacing: .04em; }
+
+  .tremplin-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-on-violet { background: #fff; color: var(--violet-deep); }
+  .btn-on-violet:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,.25); }
+  .btn-ghost-on-violet { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.4); }
+  .btn-ghost-on-violet:hover { border-color: #fff; background: rgba(255,255,255,.08); transform: translateY(-2px); }
+
+  /* ═══════════════════════ FILTRES ═══════════════════════ */
+  .blog-filters { padding: 2.4rem 4rem 0; display: flex; gap: .7rem; flex-wrap: wrap; justify-content: center; max-width: var(--max-w); margin: 0 auto; }
+  .filter-btn {
+    padding: .45rem 1.1rem; border-radius: 100px; font-size: .78rem; font-weight: 600;
+    color: var(--text-muted); border: 1px solid var(--border); background: var(--surface);
+    transition: all .25s;
+  }
+  .filter-btn.active, .filter-btn:hover { background: var(--violet); color: var(--on-violet); border-color: var(--violet); }
+
+  /* ═══════════════════════ BLOG LAYOUT ═══════════════════════ */
+  .blog-section { padding: 2.5rem 4rem var(--section-pad); }
+  .blog-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 3.5rem; }
+  .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; align-content: start; }
+
+  .post-card { border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; }
+  .post-thumb { aspect-ratio: 16/10; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .post-thumb-icon { font-size: 2.3rem; position: relative; z-index: 1; transition: transform .35s var(--ease-bounce); }
+  .post-card:hover .post-thumb-icon { transform: scale(1.15) rotate(-5deg); }
+  .pc-gold .post-thumb   { background: linear-gradient(150deg, var(--gold-pale), var(--surface-2)); }
+  .pc-cyan .post-thumb   { background: linear-gradient(150deg, var(--cyan-soft), var(--surface-2)); }
+  .pc-violet .post-thumb { background: linear-gradient(150deg, rgba(91,43,196,.16), var(--surface-2)); }
+
+  .post-content { padding: 1.2rem 1.3rem 1.4rem; display: flex; flex-direction: column; flex: 1; }
+  .post-meta { display: flex; align-items: center; gap: .55rem; font-size: .68rem; font-weight: 600; color: var(--text-soft); margin-bottom: .6rem; flex-wrap: wrap; }
+  .post-cat { padding: .16rem .55rem; border-radius: 100px; font-size: .64rem; font-weight: 700; }
+  .pc-gold .post-cat   { background: var(--gold-pale); color: var(--gold-deep); }
+  .pc-cyan .post-cat   { background: var(--cyan-soft); color: var(--cyan); }
+  .pc-violet .post-cat { background: rgba(91,43,196,.14); color: var(--violet-strong); }
+  .post-content h3 { font-family: var(--font); font-weight: 700; font-size: .95rem; color: var(--text); margin-bottom: .5rem; line-height: 1.35; }
+  .post-content p { font-size: .8rem; color: var(--text-muted); line-height: 1.6; margin-bottom: .8rem; flex: 1; }
+  .post-read { display: inline-flex; align-items: center; gap: .4rem; font-size: .72rem; font-weight: 700; color: var(--violet-strong); transition: gap .2s; }
+  .post-card:hover .post-read { gap: .7rem; }
+
+  .post-pin {
+    position: absolute; top: .8rem; right: .8rem; z-index: 2;
+    font-size: .64rem; font-weight: 700; color: var(--gold-deep);
+    background: var(--surface); border: 1px solid var(--gold); border-radius: 100px;
+    padding: .22rem .6rem; display: flex; align-items: center; gap: .3rem;
+  }
+
+  /* ═══════════════════════ SIDEBAR ═══════════════════════ */
+  .blog-sidebar { display: flex; flex-direction: column; gap: 1.6rem; }
+  .sidebar-widget { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.4rem; }
+  .widget-title { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 1.1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--border); }
+  .cat-list { display: flex; flex-direction: column; gap: .45rem; }
+  .cat-item { display: flex; justify-content: space-between; align-items: center; padding: .45rem .7rem; border-radius: 6px; font-size: .84rem; color: var(--text-muted); transition: background .2s, color .2s; cursor: pointer; }
+  .cat-item:hover { background: var(--cyan-soft); color: var(--text); }
+  .cat-count { font-size: .68rem; font-weight: 700; color: var(--text-soft); background: var(--surface-2); padding: .1rem .45rem; border-radius: 4px; }
+  .tags-cloud { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .tag-chip { padding: .3rem .7rem; border-radius: 100px; font-size: .68rem; font-weight: 600; border: 1px solid var(--border); color: var(--text-muted); transition: all .2s; }
+  .tag-chip:hover { border-color: var(--violet); color: var(--violet-strong); }
+  .newsletter-form { display: flex; flex-direction: column; gap: .7rem; }
+  .newsletter-input { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: .65rem .9rem; color: var(--text); font-family: var(--font); font-size: .85rem; outline: none; transition: border-color .25s; }
+  .newsletter-input:focus { border-color: var(--violet); }
+  .newsletter-btn { padding: .65rem; border-radius: var(--radius-sm); background: linear-gradient(135deg, var(--violet), var(--violet-deep)); color: var(--on-violet); font-weight: 700; font-size: .8rem; transition: box-shadow .25s; }
+  .newsletter-btn:hover { box-shadow: 0 8px 22px rgba(91,43,196,.3); }
+  .sidebar-tremplin { background: var(--gold-pale); border-color: var(--gold); }
+  .sidebar-tremplin .widget-title { color: var(--gold-deep); }
+  .sidebar-tremplin p { font-size: .84rem; color: #4a3a12; line-height: 1.65; margin-bottom: 1rem; }
+  [data-theme="dark"] .sidebar-tremplin p { color: var(--text-muted); }
+
+  @media (max-width: 1024px) {
+    .blog-inner { grid-template-columns: 1fr; }
+    .blog-sidebar { display: none; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .tremplin-hub { padding: 1rem 2rem 0; }
+    .blog-filters { padding: 2rem 2rem 0; }
+    .blog-section { padding: 2.5rem 2rem var(--section-pad); }
+  }
+  @media (max-width: 768px) {
+    .page-hero { padding: calc(var(--nav-h) + 1.5rem) 1.5rem 2.5rem; min-height: auto; }
+    .tremplin-hub { padding: 1rem 1.2rem 0; }
+    .tremplin-hub-inner { padding: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true"/>
+
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">
+    <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+      <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+      <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+    </svg>
+    <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+    <li><a href="about.html" data-fr="À propos" data-en="About">À propos</a></li>
+    <li><a href="services.html" data-fr="Services" data-en="Services">Services</a></li>
+    <li><a href="portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+    <li><a href="blog.html" class="active" data-fr="Blog" data-en="Blog">Blog</a></li>
+    <li><a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <div class="lang-toggle">
+      <button class="lang-btn" data-lang="fr" type="button">FR</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+    <button class="theme-toggle" type="button" aria-label="Basculer le thème clair / sombre">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
+    <a href="contact.html" class="nav-cta"><span data-fr="Nous contacter" data-en="Contact us">Nous contacter</span></a>
+    <label for="nav-toggle" class="nav-burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
+  </div>
+</nav>
+
+<div class="nav-drawer-scrim"></div>
+<div class="nav-drawer">
+  <a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="about.html" data-fr="À propos" data-en="About">À propos</a>
+  <a href="services.html" data-fr="Services" data-en="Services">Services</a>
+  <a href="portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a>
+  <a href="blog.html" class="active" data-fr="Blog" data-en="Blog">Blog</a>
+  <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  <div class="lang-toggle" style="margin-top:.4rem;">
+    <button class="lang-btn" data-lang="fr" type="button">FR</button>
+    <button class="lang-btn" data-lang="en" type="button">EN</button>
+  </div>
+  <a href="contact.html" class="btn btn-primary"><span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="orb" style="width:420px;height:420px;background:radial-gradient(circle,rgba(91,43,196,.12) 0%,transparent 70%);top:-100px;left:-100px;"></div>
+    <div class="page-hero-inner reveal">
+      <div class="page-breadcrumb"><a href="../index.html">Accueil</a><span>/</span><span data-fr="Blog" data-en="Blog">Blog</span></div>
+      <h1><span data-fr="Notre " data-en="Our ">Notre </span><span class="accent" style="color:var(--violet-strong);" data-fr="Blog" data-en="Blog">Blog</span></h1>
+      <p data-fr="Actualités du studio, conseils tech et cybersécurité, opportunités pour étudiants et entrepreneurs — tout ce qui fait avancer votre transformation digitale." data-en="Studio news, tech and cybersecurity advice, opportunities for students and entrepreneurs — everything that moves your digital transformation forward.">
+        Actualités du studio, conseils tech et cybersécurité, opportunités pour étudiants et entrepreneurs — tout ce qui fait avancer votre transformation digitale.
+      </p>
+    </div>
+  </section>
+
+  <!-- HUB TSK TREMPLIN -->
+  <section class="tremplin-hub reveal">
+    <div class="tremplin-hub-inner">
+      <div class="tremplin-hub-glow"></div>
+      <span class="tremplin-badge" data-fr="Programme pilote en cours" data-en="Pilot program underway">Programme pilote en cours</span>
+      <h2><span data-fr="TSK " data-en="TSK ">TSK </span><span class="accent" data-fr="TREMPLIN" data-en="TREMPLIN">TREMPLIN</span></h2>
+      <p class="tremplin-tagline" data-fr="6 mois · 5 activités · Une vitrine numérique" data-en="6 months · 5 businesses · One digital showcase">6 mois · 5 activités · Une vitrine numérique</p>
+      <p class="tremplin-desc" data-fr="Un programme gratuit d'accompagnement à la digitalisation, pensé pour des commerçants, artisans et porteurs d'activité du Bénin qui ont déjà tout pour réussir — sauf encore la bonne vitrine. Cinq activités, identifiées directement sur le terrain, sont accompagnées pendant six mois jusqu'à devenir pleinement autonomes dans leur présence digitale." data-en="A free digitalization support program for merchants, artisans, and business owners in Benin who already have everything it takes to succeed — except the right showcase yet. Five businesses, identified directly in the field, are supported over six months until they become fully autonomous in their digital presence.">
+        Un programme gratuit d'accompagnement à la digitalisation, pensé pour des commerçants, artisans et porteurs d'activité du Bénin qui ont déjà tout pour réussir — sauf encore la bonne vitrine. Cinq activités, identifiées directement sur le terrain, sont accompagnées pendant six mois jusqu'à devenir pleinement autonomes dans leur présence digitale.
+      </p>
+
+      <div class="phase-tracker">
+        <div class="phase-step active"><div class="phase-dot">1</div><div class="phase-name" data-fr="Diagnostic" data-en="Diagnosis">Diagnostic</div><div class="phase-weeks">S1–3</div></div>
+        <div class="phase-step"><div class="phase-dot">2</div><div class="phase-name" data-fr="Déploiement" data-en="Deployment">Déploiement</div><div class="phase-weeks">S4–10</div></div>
+        <div class="phase-step"><div class="phase-dot">3</div><div class="phase-name" data-fr="Activation" data-en="Activation">Activation</div><div class="phase-weeks">S11–18</div></div>
+        <div class="phase-step"><div class="phase-dot">4</div><div class="phase-name" data-fr="Transfert" data-en="Transfer">Transfert</div><div class="phase-weeks">S19–22</div></div>
+        <div class="phase-step"><div class="phase-dot">5</div><div class="phase-name" data-fr="Bilan" data-en="Review">Bilan</div><div class="phase-weeks">S23–24</div></div>
+      </div>
+
+      <div class="tremplin-actions">
+        <a href="blog/lancement-tsk-tremplin.html" class="btn btn-on-violet"><span data-fr="Lire l'annonce officielle" data-en="Read the official announcement">Lire l'annonce officielle</span> →</a>
+        <a href="blog/pourquoi-tsk-tremplin.html" class="btn btn-ghost-on-violet"><span data-fr="Pourquoi ce programme ?" data-en="Why this program?">Pourquoi ce programme ?</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTRES -->
+  <div class="blog-filters reveal">
+    <button class="filter-btn active" data-filter="all" data-fr="Tous" data-en="All">Tous</button>
+    <button class="filter-btn" data-filter="actus" data-fr="🚀 Actus Tsk's" data-en="🚀 Tsk's News">🚀 Actus Tsk's</button>
+    <button class="filter-btn" data-filter="opportunites" data-fr="🎓 Opportunités" data-en="🎓 Opportunities">🎓 Opportunités</button>
+    <button class="filter-btn" data-filter="tech" data-fr="💻 Tech & Dev" data-en="💻 Tech & Dev">💻 Tech & Dev</button>
+    <button class="filter-btn" data-filter="cyber" data-fr="🔐 Cybersécurité" data-en="🔐 Cybersecurity">🔐 Cybersécurité</button>
+    <button class="filter-btn" data-filter="design" data-fr="🎨 Design & Marque" data-en="🎨 Design & Brand">🎨 Design & Marque</button>
+    <button class="filter-btn" data-filter="business" data-fr="📈 Business & Digital" data-en="📈 Business & Digital">📈 Business & Digital</button>
+    <button class="filter-btn" data-filter="afrique" data-fr="🌍 Afrique Digitale" data-en="🌍 Digital Africa">🌍 Afrique Digitale</button>
+  </div>
+
+  <!-- BLOG CONTENT -->
+  <section class="blog-section">
+    <div class="blog-inner">
+
+      <div class="blog-grid">
+
+        <a href="blog/lancement-tsk-tremplin.html" class="post-card card reveal" data-cat="actus" style="position:relative;">
+          <span class="post-pin">📌 Tremplin</span>
+          <div class="post-thumb pc-gold"><span class="post-thumb-icon">🚀</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);" data-fr="Actus Tsk's" data-en="Tsk's News">Actus Tsk's</span><span>· 4 min</span></div>
+            <h3 data-fr="Lancement officiel de Tsk Tremplin" data-en="Official launch of Tsk Tremplin">Lancement officiel de Tsk Tremplin</h3>
+            <p data-fr="Un programme gratuit de digitalisation pour 5 entrepreneurs béninois, sur 6 mois. Pas de candidature — du potentiel repéré sur le terrain." data-en="A free digitalization program for 5 Beninese entrepreneurs, over 6 months. No application — potential spotted in the field.">Un programme gratuit de digitalisation pour 5 entrepreneurs béninois, sur 6 mois. Pas de candidature — du potentiel repéré sur le terrain.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/pourquoi-tsk-tremplin.html" class="post-card card reveal reveal-delay-1" data-cat="actus" style="position:relative;">
+          <span class="post-pin">📌 Tremplin</span>
+          <div class="post-thumb pc-gold"><span class="post-thumb-icon">💡</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);">Actus Tsk's</span><span>· 3 min</span></div>
+            <h3 data-fr="Pourquoi Tsk Tremplin ? Le constat derrière le programme" data-en="Why Tsk Tremplin? The reasoning behind the program">Pourquoi Tsk Tremplin ? Le constat derrière le programme</h3>
+            <p data-fr="Beaucoup d'activités tournent bien sur le terrain mais restent invisibles en ligne. Pas par manque de valeur — par manque d'accès." data-en="Many businesses do well on the ground but stay invisible online. Not for lack of value — for lack of access.">Beaucoup d'activités tournent bien sur le terrain mais restent invisibles en ligne. Pas par manque de valeur — par manque d'accès.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/bourses-etudiants-africains.html" class="post-card card pc-cyan reveal" data-cat="opportunites">
+          <div class="post-thumb"><span class="post-thumb-icon">🎓</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat" data-fr="Opportunités" data-en="Opportunities">Opportunités</span><span>· 5 min</span></div>
+            <h3 data-fr="5 bourses d'études ouvertes aux étudiants africains" data-en="5 scholarships open to African students">5 bourses d'études ouvertes aux étudiants africains</h3>
+            <p data-fr="Un tour d'horizon des bourses accessibles cette année, avec critères et démarches pour candidater." data-en="An overview of scholarships available this year, with criteria and how to apply.">Un tour d'horizon des bourses accessibles cette année, avec critères et démarches pour candidater.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/cv-qui-retient-attention.html" class="post-card card pc-cyan reveal reveal-delay-1" data-cat="opportunites">
+          <div class="post-thumb"><span class="post-thumb-icon">📄</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat">Opportunités</span><span>· 4 min</span></div>
+            <h3 data-fr="Comment rédiger un CV qui retient l'attention des recruteurs" data-en="How to write a CV that catches recruiters' attention">Comment rédiger un CV qui retient l'attention des recruteurs</h3>
+            <p data-fr="Structure, formulations, erreurs à éviter — les bases d'un CV qui passe le premier tri." data-en="Structure, phrasing, mistakes to avoid — the basics of a CV that survives the first cut.">Structure, formulations, erreurs à éviter — les bases d'un CV qui passe le premier tri.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/5-technologies-transforment-afrique.html" class="post-card card pc-violet reveal" data-cat="tech">
+          <div class="post-thumb"><span class="post-thumb-icon">💻</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat" data-fr="Tech & Dev" data-en="Tech & Dev">Tech & Dev</span><span>· 5 min</span></div>
+            <h3 data-fr="5 technologies qui transforment l'Afrique" data-en="5 technologies transforming Africa">5 technologies qui transforment l'Afrique</h3>
+            <p data-fr="IA locale, fintech mobile, IoT agricole... les innovations qui changent la donne sur le continent." data-en="Local AI, mobile fintech, agricultural IoT... the innovations changing the game on the continent.">IA locale, fintech mobile, IoT agricole... les innovations qui changent la donne sur le continent.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/developpeur-debutant-2026.html" class="post-card card pc-violet reveal reveal-delay-1" data-cat="tech">
+          <div class="post-thumb"><span class="post-thumb-icon">🧑‍💻</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat">Tech & Dev</span><span>· 6 min</span></div>
+            <h3 data-fr="Développeur débutant : par où commencer en 2026" data-en="Beginner developer: where to start in 2026">Développeur débutant : par où commencer en 2026</h3>
+            <p data-fr="Langages, ressources gratuites, premiers projets — une feuille de route réaliste pour démarrer." data-en="Languages, free resources, first projects — a realistic roadmap to get started.">Langages, ressources gratuites, premiers projets — une feuille de route réaliste pour démarrer.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/protegez-business-en-ligne.html" class="post-card card pc-gold reveal" data-cat="cyber">
+          <div class="post-thumb"><span class="post-thumb-icon">🔐</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</span><span>· 6 min</span></div>
+            <h3 data-fr="Cybersécurité : protégez votre business en ligne" data-en="Cybersecurity: protect your online business">Cybersécurité : protégez votre business en ligne</h3>
+            <p data-fr="Les cyberattaques augmentent en Afrique. Les bonnes pratiques essentielles pour sécuriser votre présence digitale." data-en="Cyberattacks are increasing in Africa. Essential best practices to secure your digital presence.">Les cyberattaques augmentent en Afrique. Les bonnes pratiques essentielles pour sécuriser votre présence digitale.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/5-reflexes-securiser-comptes.html" class="post-card card pc-gold reveal reveal-delay-1" data-cat="cyber">
+          <div class="post-thumb"><span class="post-thumb-icon">🛡️</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);">Cybersécurité</span><span>· 4 min</span></div>
+            <h3 data-fr="5 réflexes pour sécuriser vos comptes en ligne" data-en="5 habits to secure your online accounts">5 réflexes pour sécuriser vos comptes en ligne</h3>
+            <p data-fr="Mots de passe, double authentification, mises à jour — les gestes simples qui font la différence." data-en="Passwords, two-factor authentication, updates — simple habits that make a difference.">Mots de passe, double authentification, mises à jour — les gestes simples qui font la différence.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/identite-visuelle-forte.html" class="post-card card pc-cyan reveal" data-cat="design">
+          <div class="post-thumb"><span class="post-thumb-icon">🎨</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat" data-fr="Design & Marque" data-en="Design & Brand">Design & Marque</span><span>· 4 min</span></div>
+            <h3 data-fr="Pourquoi une identité visuelle forte change tout" data-en="Why a strong visual identity changes everything">Pourquoi une identité visuelle forte change tout</h3>
+            <p data-fr="Logo, couleurs, cohérence — comment une image professionnelle influence directement la confiance client." data-en="Logo, colors, consistency — how a professional image directly influences client trust.">Logo, couleurs, cohérence — comment une image professionnelle influence directement la confiance client.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/afrofuturisme-design-africain.html" class="post-card card pc-cyan reveal reveal-delay-1" data-cat="design">
+          <div class="post-thumb"><span class="post-thumb-icon">🌀</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat">Design & Marque</span><span>· 4 min</span></div>
+            <h3 data-fr="Afro-futurisme : le design africain à l'ère du digital" data-en="Afrofuturism: African design in the digital age">Afro-futurisme : le design africain à l'ère du digital</h3>
+            <p data-fr="Comment les motifs traditionnels africains inspirent une nouvelle génération de designers digitaux." data-en="How traditional African patterns inspire a new generation of digital designers.">Comment les motifs traditionnels africains inspirent une nouvelle génération de designers digitaux.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/booster-visibilite-petit-budget.html" class="post-card card pc-violet reveal" data-cat="business">
+          <div class="post-thumb"><span class="post-thumb-icon">📈</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat" data-fr="Business & Digital" data-en="Business & Digital">Business & Digital</span><span>· 5 min</span></div>
+            <h3 data-fr="Booster sa visibilité en ligne avec un petit budget" data-en="Boosting your online visibility on a small budget">Booster sa visibilité en ligne avec un petit budget</h3>
+            <p data-fr="Des actions concrètes et peu coûteuses pour commencer à exister en ligne dès aujourd'hui." data-en="Concrete, low-cost actions to start existing online today.">Des actions concrètes et peu coûteuses pour commencer à exister en ligne dès aujourd'hui.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/site-web-ou-reseaux-sociaux.html" class="post-card card pc-violet reveal reveal-delay-1" data-cat="business">
+          <div class="post-thumb"><span class="post-thumb-icon">🧭</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat">Business & Digital</span><span>· 5 min</span></div>
+            <h3 data-fr="Site web ou réseaux sociaux : par où commencer" data-en="Website or social media: where to start">Site web ou réseaux sociaux : par où commencer</h3>
+            <p data-fr="Quand on a un budget limité, quelle priorité donner à sa présence digitale ? Notre grille de décision." data-en="With a limited budget, what should you prioritize in your digital presence? Our decision framework.">Quand on a un budget limité, quelle priorité donner à sa présence digitale ? Notre grille de décision.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/revolution-digitale-afrique.html" class="post-card card pc-gold reveal" data-cat="afrique">
+          <div class="post-thumb"><span class="post-thumb-icon">🌍</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);" data-fr="Afrique Digitale" data-en="Digital Africa">Afrique Digitale</span><span>· 6 min</span></div>
+            <h3 data-fr="L'Afrique est-elle prête pour la révolution digitale ?" data-en="Is Africa ready for the digital revolution?">L'Afrique est-elle prête pour la révolution digitale ?</h3>
+            <p data-fr="Entre le taux de connectivité le plus faible et la croissance la plus rapide au monde — le grand paradoxe africain." data-en="Between the lowest connectivity rate and the fastest growth in the world — Africa's great paradox.">Entre le taux de connectivité le plus faible et la croissance la plus rapide au monde — le grand paradoxe africain.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+        <a href="blog/fintech-elearning-agritech.html" class="post-card card pc-gold reveal reveal-delay-1" data-cat="afrique">
+          <div class="post-thumb"><span class="post-thumb-icon">📱</span></div>
+          <div class="post-content">
+            <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);">Afrique Digitale</span><span>· 5 min</span></div>
+            <h3 data-fr="Fintech, e-learning, agritech : les secteurs qui explosent" data-en="Fintech, e-learning, agritech: the booming sectors">Fintech, e-learning, agritech : les secteurs qui explosent</h3>
+            <p data-fr="Trois secteurs portés par une jeunesse connectée qui redessinent l'économie numérique africaine." data-en="Three sectors driven by a connected youth reshaping Africa's digital economy.">Trois secteurs portés par une jeunesse connectée qui redessinent l'économie numérique africaine.</p>
+            <span class="post-read" data-fr="Lire →" data-en="Read →">Lire →</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="blog-sidebar">
+        <div class="sidebar-widget">
+          <div class="widget-title" data-fr="À propos du blog" data-en="About the blog">À propos du blog</div>
+          <p style="font-size:.85rem;color:var(--text-muted);line-height:1.7;" data-fr="Notre blog explore l'intersection entre technologie, innovation et réalités africaines — et documente l'avancée de nos programmes d'impact comme Tsk Tremplin." data-en="Our blog explores the intersection of technology, innovation, and African realities — and documents the progress of our impact programs like Tsk Tremplin.">
+            Notre blog explore l'intersection entre technologie, innovation et réalités africaines — et documente l'avancée de nos programmes d'impact comme Tsk Tremplin.
+          </p>
+        </div>
+
+        <div class="sidebar-widget sidebar-tremplin">
+          <div class="widget-title" data-fr="Programme en cours" data-en="Ongoing program">Programme en cours</div>
+          <p data-fr="Tsk Tremplin accompagne 5 entrepreneurs béninois vers l'autonomie digitale. Suivez chaque étape du pilote." data-en="Tsk Tremplin supports 5 Beninese entrepreneurs toward digital autonomy. Follow every step of the pilot.">Tsk Tremplin accompagne 5 entrepreneurs béninois vers l'autonomie digitale. Suivez chaque étape du pilote.</p>
+          <a href="blog/lancement-tsk-tremplin.html" class="btn btn-outline" style="width:100%;justify-content:center;padding:.55rem;font-size:.75rem;" data-fr="Découvrir le programme" data-en="Discover the program">Découvrir le programme</a>
+        </div>
+
+        <div class="sidebar-widget">
+          <div class="widget-title" data-fr="Catégories" data-en="Categories">Catégories</div>
+          <div class="cat-list">
+            <div class="cat-item" data-filter="actus"><span data-fr="🚀 Actus Tsk's" data-en="🚀 Tsk's News">🚀 Actus Tsk's</span><span class="cat-count">2</span></div>
+            <div class="cat-item" data-filter="opportunites"><span data-fr="🎓 Opportunités" data-en="🎓 Opportunities">🎓 Opportunités</span><span class="cat-count">2</span></div>
+            <div class="cat-item" data-filter="tech"><span>💻 Tech & Dev</span><span class="cat-count">2</span></div>
+            <div class="cat-item" data-filter="cyber"><span data-fr="🔐 Cybersécurité" data-en="🔐 Cybersecurity">🔐 Cybersécurité</span><span class="cat-count">2</span></div>
+            <div class="cat-item" data-filter="design"><span data-fr="🎨 Design & Marque" data-en="🎨 Design & Brand">🎨 Design & Marque</span><span class="cat-count">2</span></div>
+            <div class="cat-item" data-filter="business"><span data-fr="📈 Business & Digital" data-en="📈 Business & Digital">📈 Business & Digital</span><span class="cat-count">2</span></div>
+            <div class="cat-item" data-filter="afrique"><span data-fr="🌍 Afrique Digitale" data-en="🌍 Digital Africa">🌍 Afrique Digitale</span><span class="cat-count">2</span></div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <div class="widget-title" data-fr="Tags" data-en="Tags">Tags</div>
+          <div class="tags-cloud">
+            <span class="tag-chip">Tsk Tremplin</span>
+            <span class="tag-chip">Bénin</span>
+            <span class="tag-chip">Cybersécurité</span>
+            <span class="tag-chip">Design</span>
+            <span class="tag-chip">Étudiants</span>
+            <span class="tag-chip">PME</span>
+            <span class="tag-chip">Afrique</span>
+            <span class="tag-chip">Innovation</span>
+          </div>
+        </div>
+
+        <div class="sidebar-widget" style="background:var(--cyan-soft);border-color:var(--cyan);">
+          <div class="widget-title" style="color:var(--cyan);" data-fr="Newsletter" data-en="Newsletter">Newsletter</div>
+          <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:1rem;" data-fr="Recevez nos articles et les avancées de Tsk Tremplin directement dans votre boîte mail." data-en="Get our articles and Tsk Tremplin updates directly in your inbox.">Recevez nos articles et les avancées de Tsk Tremplin directement dans votre boîte mail.</p>
+          <div class="newsletter-form">
+            <input class="newsletter-input" type="email" data-fr-placeholder="Votre email" data-en-placeholder="Your email" placeholder="Votre email"/>
+            <button class="newsletter-btn" data-fr="S'abonner →" data-en="Subscribe →">S'abonner →</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">
+        <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+          <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+          <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+        </svg>
+        <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+      </a>
+      <p data-fr="Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception." data-en="Tech studio based in Cotonou, Benin. We make technology accessible to everyone, without exception.">
+        Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception.
+      </p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+        </a>
+        <a href="https://instagram.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/tsadok-adido" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="https://github.com/FlashTsk17" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.4 9.4 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
+      <ul>
+        <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+        <li><a href="about.html" data-fr="À propos" data-en="About">À propos</a></li>
+        <li><a href="services.html" data-fr="Services" data-en="Services">Services</a></li>
+        <li><a href="portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+        <li><a href="blog.html" data-fr="Blog" data-en="Blog">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Services" data-en="Services">Services</h4>
+      <ul>
+        <li><a href="services.html" data-fr="Développement Web & Mobile" data-en="Web & Mobile Dev">Développement Web & Mobile</a></li>
+        <li><a href="services.html" data-fr="Design & Identité" data-en="Design & Identity">Design & Identité</a></li>
+        <li><a href="services.html" data-fr="Marketing Digital" data-en="Digital Marketing">Marketing Digital</a></li>
+        <li><a href="services.html" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</a></li>
+        <li><a href="services.html" data-fr="Formation Tech" data-en="Tech Training">Formation Tech</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+      <ul>
+        <li><a href="mailto:adidomahukpeou@gmail.com">📧 adidomahukpeou@gmail.com</a></li>
+        <li><a href="tel:+22901522711198">📱 +229 01 52 27 11 98</a></li>
+        <li><a href="tel:+22901603452165">📱 +229 01 60 34 52 65</a></li>
+        <li><a href="contact.html" data-fr="📍 Cotonou, Bénin" data-en="📍 Cotonou, Benin">📍 Cotonou, Bénin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span data-fr="© 2026 Tsk's Tech Services — Tous droits réservés" data-en="© 2026 Tsk's Tech Services — All rights reserved">© 2026 Tsk's Tech Services — Tous droits réservés</span>
+    <a href="mentions-legales.html" data-fr="Mentions légales & Confidentialité" data-en="Legal Notice & Privacy">Mentions légales & Confidentialité</a>
+    <span><span data-fr="Fondé par " data-en="Founded by ">Fondé par </span><strong>Tsadok Adido</strong></span>
+  </div>
+</footer>
+
+<script src="../js/global.js"></script>
+<script>
+  // Filtre par catégorie — boutons ET items de la sidebar
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const catItems = document.querySelectorAll('.cat-item[data-filter]');
+  const cards = document.querySelectorAll('.post-card[data-cat]');
+  function applyFilter(filter) {
+    filterBtns.forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
+    cards.forEach(c => { c.style.display = (filter === 'all' || c.dataset.cat === filter) ? '' : 'none'; });
+  }
+  filterBtns.forEach(btn => btn.addEventListener('click', () => applyFilter(btn.dataset.filter)));
+  catItems.forEach(item => item.addEventListener('click', () => applyFilter(item.dataset.filter)));
+</script>
+</body>
+</html>

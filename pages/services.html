@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Développement web & mobile, design, marketing digital, accompagnement académique, cybersécurité et formation tech — les 6 services de Tsk's Tech Services, sur devis."/>
+<title>Nos Services — Tsk's Tech Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"/>
+<link rel="stylesheet" href="../css/global.css"/>
+<link rel="canonical" href="https://tsks-tech-services.com/pages/services.html"/>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tsk's Tech Services"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:title" content="Nos Services — Tsk's Tech Services"/>
+<meta property="og:description" content="Développement web & mobile, design, marketing digital, accompagnement académique, cybersécurité et formation tech — les 6 services de Tsk's Tech Services, sur devis."/>
+<meta property="og:url" content="https://tsks-tech-services.com/pages/services.html"/>
+<meta property="og:image" content="https://tsks-tech-services.com/images/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Nos Services — Tsk's Tech Services"/>
+<meta name="twitter:description" content="Développement web & mobile, design, marketing digital, accompagnement académique, cybersécurité et formation tech — les 6 services de Tsk's Tech Services, sur devis."/>
+<meta name="twitter:image" content="https://tsks-tech-services.com/images/og-image.png"/>
+<style>
+  .page-hero { min-height: 42vh; display: flex; align-items: flex-end; padding: calc(var(--nav-h) + 3rem) 4rem 3rem; position: relative; overflow: hidden; background: linear-gradient(160deg, var(--bg-alt) 0%, var(--bg) 65%); }
+  .page-hero-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+  .page-breadcrumb { display: flex; gap: .5rem; align-items: center; font-size: .78rem; font-weight: 500; color: var(--text-muted); margin-bottom: 1.4rem; }
+  .page-breadcrumb a { color: var(--violet-strong); }
+  .page-breadcrumb span { color: var(--border-strong); }
+  .page-hero h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 800; line-height: 1; margin-bottom: 1.1rem; }
+  .page-hero p { font-size: 1.02rem; color: var(--text-muted); max-width: 560px; line-height: 1.75; }
+
+  /* Bandeau tarification */
+  .quote-banner {
+    max-width: var(--max-w); margin: -1.6rem auto 0; padding: 0 4rem; position: relative; z-index: 2;
+  }
+  .quote-banner-inner {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.2rem;
+    background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--gold);
+    border-radius: var(--radius-md); padding: 1.4rem 1.8rem; box-shadow: var(--shadow-md);
+  }
+  .quote-banner-text { display: flex; align-items: center; gap: .9rem; font-size: .92rem; color: var(--text-muted); }
+  .quote-banner-text strong { color: var(--text); }
+  .quote-banner-icon { font-size: 1.5rem; flex-shrink: 0; }
+
+  /* Services détaillés */
+  .services-detail { padding: var(--section-pad); }
+  .services-detail-inner { max-width: var(--max-w); margin: 0 auto; }
+  .service-block { display: grid; grid-template-columns: .85fr 1.15fr; gap: 3.2rem; align-items: center; padding: 3.4rem 0; border-bottom: 1px solid var(--border); }
+  .service-block:first-child { padding-top: 1rem; }
+  .service-block:last-child { border-bottom: none; }
+  .service-block:nth-child(even) { direction: rtl; }
+  .service-block:nth-child(even) > * { direction: ltr; }
+
+  /* Visuel placeholder — à remplacer par une vraie image/illustration plus tard (voir commentaire HTML) */
+  .service-visual { aspect-ratio: 1; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px solid var(--border); }
+  .service-visual span { font-size: 4.4rem; filter: drop-shadow(0 6px 16px rgba(0,0,0,.15)); }
+  .sb-1 .service-visual { background: linear-gradient(150deg, var(--violet), var(--violet-deep)); }
+  .sb-2 .service-visual { background: linear-gradient(150deg, var(--gold), var(--gold-deep)); }
+  .sb-3 .service-visual { background: linear-gradient(150deg, #007A6B, #004F45); }
+  .sb-4 .service-visual { background: linear-gradient(150deg, var(--violet-strong), var(--violet)); }
+  .sb-5 .service-visual { background: linear-gradient(150deg, var(--gold-deep), #8A5E00); }
+  .sb-6 .service-visual { background: linear-gradient(150deg, #007A6B, var(--violet-deep)); }
+
+  .service-number { font-size: 3.2rem; font-weight: 800; color: var(--border-strong); line-height: 1; margin-bottom: -.3rem; }
+  .service-tag { display: inline-flex; align-items: center; gap: .5rem; padding: .35rem .85rem; border-radius: 100px; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--cyan-soft); color: var(--cyan); margin-bottom: 1rem; }
+  .service-content h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: .9rem; }
+  .service-content > p { color: var(--text-muted); line-height: 1.8; font-size: .93rem; margin-bottom: 1.4rem; }
+  .service-features { display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1.8rem; }
+  .service-feature { display: flex; align-items: flex-start; gap: .65rem; font-size: .87rem; color: var(--text); }
+  .service-feature::before { content: '✦'; color: var(--cyan); font-size: .65rem; margin-top: .3rem; flex-shrink: 0; }
+  .service-cta-row { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+  .service-quote-note { font-size: .78rem; color: var(--text-soft); }
+
+  /* Processus — 5 étapes */
+  .process-section { padding: var(--section-pad); background: var(--bg-alt); }
+  .process-inner { max-width: var(--max-w); margin: 0 auto; }
+  .process-header { text-align: center; max-width: 560px; margin: 0 auto 3.4rem; }
+  .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.2rem; position: relative; }
+  .process-steps::before { content: ''; position: absolute; top: 27px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, var(--violet), var(--gold), var(--cyan)); opacity: .4; }
+  .process-step { text-align: center; position: relative; }
+  .step-num { width: 54px; height: 54px; border-radius: 50%; background: var(--surface); border: 2px solid var(--border-strong); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.1rem; position: relative; z-index: 1; font-weight: 800; color: var(--violet-strong); }
+  .process-step:nth-child(odd) .step-num { border-color: var(--gold); }
+  .process-step h5 { font-size: .88rem; font-weight: 700; margin-bottom: .4rem; }
+  .process-step p { font-size: .78rem; color: var(--text-muted); line-height: 1.55; }
+
+  /* CTA finale double-audience (reprend le style de l'accueil) */
+  .services-cta { padding: var(--section-pad); text-align: center; background: linear-gradient(160deg, var(--violet-deep), var(--bg)); }
+  [data-theme="dark"] .services-cta { background: linear-gradient(160deg, var(--violet-deep) 0%, var(--bg) 70%); }
+  .services-cta-inner { max-width: 640px; margin: 0 auto; }
+  .services-cta h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); color: #fff; margin-bottom: 1rem; }
+  [data-theme="dark"] .services-cta h2 { color: var(--text); }
+  .services-cta p { color: rgba(255,255,255,.75); margin-bottom: 2rem; }
+  [data-theme="dark"] .services-cta p { color: var(--text-muted); }
+  .services-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  @media (max-width: 1024px) {
+    .service-block { grid-template-columns: 1fr; gap: 1.8rem; }
+    .service-block:nth-child(even) { direction: ltr; }
+    .service-visual { max-width: 320px; margin: 0 auto; }
+    .process-steps { grid-template-columns: 1fr 1fr; gap: 2rem 1rem; }
+    .process-steps::before { display: none; }
+    .quote-banner { padding: 0 2rem; }
+  }
+  @media (max-width: 768px) {
+    .page-hero { padding: calc(var(--nav-h) + 2rem) 1.5rem 2.5rem; }
+    .quote-banner { padding: 0 1.5rem; margin-top: -1.2rem; }
+    .quote-banner-inner { flex-direction: column; align-items: flex-start; }
+    .process-steps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true"/>
+
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">
+    <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+      <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+      <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+    </svg>
+    <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+    <li><a href="about.html" data-fr="À propos" data-en="About">À propos</a></li>
+    <li><a href="services.html" class="active" data-fr="Services" data-en="Services">Services</a></li>
+    <li><a href="portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+    <li><a href="blog.html" data-fr="Blog" data-en="Blog">Blog</a></li>
+    <li><a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <div class="lang-toggle">
+      <button class="lang-btn" data-lang="fr" type="button">FR</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+    <button class="theme-toggle" type="button" aria-label="Basculer le thème clair / sombre">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
+    <a href="contact.html" class="nav-cta"><span data-fr="Nous contacter" data-en="Contact us">Nous contacter</span></a>
+    <label for="nav-toggle" class="nav-burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
+  </div>
+</nav>
+
+<div class="nav-drawer-scrim"></div>
+<div class="nav-drawer">
+  <a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="about.html" data-fr="À propos" data-en="About">À propos</a>
+  <a href="services.html" class="active" data-fr="Services" data-en="Services">Services</a>
+  <a href="portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a>
+  <a href="blog.html" data-fr="Blog" data-en="Blog">Blog</a>
+  <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  <div class="lang-toggle" style="margin-top:.4rem;">
+    <button class="lang-btn" data-lang="fr" type="button">FR</button>
+    <button class="lang-btn" data-lang="en" type="button">EN</button>
+  </div>
+  <a href="contact.html" class="btn btn-primary"><span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="orb" style="width:480px;height:480px;background:radial-gradient(circle,rgba(240,165,0,.12) 0%,transparent 70%);top:-140px;right:-140px;"></div>
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb">
+        <a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a><span>/</span>
+        <span data-fr="Services" data-en="Services">Services</span>
+      </div>
+      <h1><span data-fr="Nos " data-en="Our ">Nos </span><span style="color:var(--gold);" data-fr="Services" data-en="Services">Services</span></h1>
+      <p data-fr="Six expertises complémentaires, du particulier à l'institution. Chaque projet est unique — nos solutions le sont aussi." data-en="Six complementary areas of expertise, from individuals to institutions. Every project is unique — so are our solutions.">
+        Six expertises complémentaires, du particulier à l'institution. Chaque projet est unique — nos solutions le sont aussi.
+      </p>
+    </div>
+  </section>
+
+  <!-- BANDEAU TARIFICATION -->
+  <div class="quote-banner reveal">
+    <div class="quote-banner-inner">
+      <div class="quote-banner-text">
+        <span class="quote-banner-icon">💬</span>
+        <span>
+          <span data-fr="Tous nos tarifs sont établis " data-en="All our rates are quoted ">Tous nos tarifs sont établis </span><strong data-fr="sur devis" data-en="on request">sur devis</strong><span data-fr=", selon la taille, la complexité et les objectifs de votre projet." data-en=", based on the size, complexity and goals of your project.">, selon la taille, la complexité et les objectifs de votre projet.</span>
+        </span>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="flex-shrink:0;"><span data-fr="Demander un devis gratuit" data-en="Request a free quote">Demander un devis gratuit</span> →</a>
+    </div>
+  </div>
+
+  <!-- SERVICES DÉTAILLÉS -->
+  <section class="services-detail">
+    <div class="services-detail-inner">
+
+      <!-- 1. Développement Web & Mobile -->
+      <!-- Visuel placeholder : remplacer .service-visual par une image (voir class sb-1) une fois les photos fournies -->
+      <div class="service-block sb-1 reveal">
+        <div class="service-visual"><span>🌐</span></div>
+        <div class="service-content">
+          <div class="service-number">01</div>
+          <div class="service-tag" data-fr="DÉVELOPPEMENT" data-en="DEVELOPMENT">DÉVELOPPEMENT</div>
+          <h2 data-fr="Développement Web & Mobile" data-en="Web & Mobile Development">Développement Web & Mobile</h2>
+          <p data-fr="Sites vitrines, plateformes complexes, e-commerce et applications mobiles iOS/Android — natives ou cross-platform. Du cahier des charges au déploiement." data-en="Showcase sites, complex platforms, e-commerce and iOS/Android mobile apps — native or cross-platform. From spec to deployment.">
+            Sites vitrines, plateformes complexes, e-commerce et applications mobiles iOS/Android — natives ou cross-platform. Du cahier des charges au déploiement.
+          </p>
+          <div class="service-features">
+            <div class="service-feature" data-fr="Sites vitrine & portfolios professionnels" data-en="Showcase sites & professional portfolios">Sites vitrine & portfolios professionnels</div>
+            <div class="service-feature" data-fr="Applications web sur mesure (SaaS, LMS...)" data-en="Custom web applications (SaaS, LMS...)">Applications web sur mesure (SaaS, LMS...)</div>
+            <div class="service-feature" data-fr="Applications mobiles iOS & Android" data-en="iOS & Android mobile applications">Applications mobiles iOS & Android</div>
+            <div class="service-feature" data-fr="Plateformes e-commerce & boutiques en ligne" data-en="E-commerce platforms & online stores">Plateformes e-commerce & boutiques en ligne</div>
+          </div>
+          <div class="service-cta-row">
+            <a href="contact.html" class="btn btn-primary"><span data-fr="Demander un devis" data-en="Request a quote">Demander un devis</span> →</a>
+            <span class="service-quote-note" data-fr="Tarif sur devis" data-en="Price on request">Tarif sur devis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Design & Identité Visuelle -->
+      <div class="service-block sb-2 reveal">
+        <div class="service-visual"><span>🎨</span></div>
+        <div class="service-content">
+          <div class="service-number">02</div>
+          <div class="service-tag" data-fr="DESIGN" data-en="DESIGN">DESIGN</div>
+          <h2 data-fr="Design & Identité Visuelle" data-en="Design & Visual Identity">Design & Identité Visuelle</h2>
+          <p data-fr="Votre marque est votre première impression. Nous créons des identités visuelles mémorables et des interfaces UI/UX qui donnent envie d'agir." data-en="Your brand is your first impression. We create memorable visual identities and UI/UX interfaces that drive action.">
+            Votre marque est votre première impression. Nous créons des identités visuelles mémorables et des interfaces UI/UX qui donnent envie d'agir.
+          </p>
+          <div class="service-features">
+            <div class="service-feature" data-fr="Création de logos & chartes graphiques" data-en="Logo creation & brand guidelines">Création de logos & chartes graphiques</div>
+            <div class="service-feature" data-fr="Design UI/UX pour web et mobile" data-en="UI/UX design for web and mobile">Design UI/UX pour web et mobile</div>
+            <div class="service-feature" data-fr="Supports print (cartes, flyers, brochures)" data-en="Print materials (cards, flyers, brochures)">Supports print (cartes, flyers, brochures)</div>
+            <div class="service-feature" data-fr="Refonte & modernisation d'identités existantes" data-en="Redesign & modernization of existing identities">Refonte & modernisation d'identités existantes</div>
+          </div>
+          <div class="service-cta-row">
+            <a href="contact.html" class="btn btn-primary"><span data-fr="Demander un devis" data-en="Request a quote">Demander un devis</span> →</a>
+            <span class="service-quote-note" data-fr="Tarif sur devis" data-en="Price on request">Tarif sur devis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Marketing Digital & Community Management -->
+      <div class="service-block sb-3 reveal">
+        <div class="service-visual"><span>📣</span></div>
+        <div class="service-content">
+          <div class="service-number">03</div>
+          <div class="service-tag" data-fr="MARKETING DIGITAL" data-en="DIGITAL MARKETING">MARKETING DIGITAL</div>
+          <h2 data-fr="Marketing Digital & Community Management" data-en="Digital Marketing & Community Management">Marketing Digital & Community Management</h2>
+          <p data-fr="Boostez votre visibilité en ligne. Stratégie de contenu, gestion des réseaux sociaux et campagnes ciblées pour atteindre votre audience." data-en="Boost your online visibility. Content strategy, social media management and targeted campaigns to reach your audience.">
+            Boostez votre visibilité en ligne. Stratégie de contenu, gestion des réseaux sociaux et campagnes ciblées pour atteindre votre audience.
+          </p>
+          <div class="service-features">
+            <div class="service-feature" data-fr="Stratégie de contenu & calendrier éditorial" data-en="Content strategy & editorial calendar">Stratégie de contenu & calendrier éditorial</div>
+            <div class="service-feature" data-fr="Gestion des réseaux sociaux (FB, IG, LinkedIn...)" data-en="Social media management (FB, IG, LinkedIn...)">Gestion des réseaux sociaux (FB, IG, LinkedIn...)</div>
+            <div class="service-feature" data-fr="Publicité digitale & campagnes ciblées" data-en="Digital advertising & targeted campaigns">Publicité digitale & campagnes ciblées</div>
+            <div class="service-feature" data-fr="Reporting & analyse de performance" data-en="Reporting & performance analysis">Reporting & analyse de performance</div>
+          </div>
+          <div class="service-cta-row">
+            <a href="contact.html" class="btn btn-primary"><span data-fr="Demander un devis" data-en="Request a quote">Demander un devis</span> →</a>
+            <span class="service-quote-note" data-fr="Tarif sur devis" data-en="Price on request">Tarif sur devis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Accompagnement académique & professionnel -->
+      <div class="service-block sb-4 reveal">
+        <div class="service-visual"><span>🎓</span></div>
+        <div class="service-content">
+          <div class="service-number">04</div>
+          <div class="service-tag" data-fr="ACCOMPAGNEMENT" data-en="SUPPORT">ACCOMPAGNEMENT</div>
+          <h2 data-fr="Accompagnement Académique & Professionnel" data-en="Academic & Professional Support">Accompagnement Académique & Professionnel</h2>
+          <p data-fr="Votre réussite est notre priorité. Nous accompagnons élèves, étudiants et jeunes professionnels dans leurs projets académiques et leur entrée dans la vie active." data-en="Your success is our priority. We support students and young professionals in their academic projects and career start.">
+            Votre réussite est notre priorité. Nous accompagnons élèves, étudiants et jeunes professionnels dans leurs projets académiques et leur entrée dans la vie active.
+          </p>
+          <div class="service-features">
+            <div class="service-feature" data-fr="CV percutants & lettres de motivation" data-en="Compelling CVs & cover letters">CV percutants & lettres de motivation</div>
+            <div class="service-feature" data-fr="Aide aux exposés, mémoires & thèses" data-en="Help with presentations, theses & dissertations">Aide aux exposés, mémoires & thèses</div>
+            <div class="service-feature" data-fr="Accès facilité aux ressources académiques" data-en="Facilitated access to academic resources">Accès facilité aux ressources académiques</div>
+            <div class="service-feature" data-fr="Préparation aux entretiens professionnels" data-en="Job interview preparation">Préparation aux entretiens professionnels</div>
+          </div>
+          <div class="service-cta-row">
+            <a href="contact.html" class="btn btn-primary"><span data-fr="Demander un devis" data-en="Request a quote">Demander un devis</span> →</a>
+            <span class="service-quote-note" data-fr="Tarif sur devis" data-en="Price on request">Tarif sur devis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Cybersécurité & Conseil digital -->
+      <div class="service-block sb-5 reveal">
+        <div class="service-visual"><span>🔐</span></div>
+        <div class="service-content">
+          <div class="service-number">05</div>
+          <div class="service-tag" data-fr="SÉCURITÉ & CONSEIL" data-en="SECURITY & CONSULTING">SÉCURITÉ & CONSEIL</div>
+          <h2 data-fr="Cybersécurité & Conseil Digital" data-en="Cybersecurity & Digital Consulting">Cybersécurité & Conseil Digital</h2>
+          <p data-fr="Chaque projet est conçu avec des standards de sécurité robustes. Nous auditons, protégeons et conseillons sur votre transformation digitale." data-en="Every project is built with robust security standards. We audit, protect and advise on your digital transformation.">
+            Chaque projet est conçu avec des standards de sécurité robustes. Nous auditons, protégeons et conseillons sur votre transformation digitale.
+          </p>
+          <div class="service-features">
+            <div class="service-feature" data-fr="Audit de sécurité & protection des données" data-en="Security audit & data protection">Audit de sécurité & protection des données</div>
+            <div class="service-feature" data-fr="Sécurisation de sites & applications existants" data-en="Securing existing sites & applications">Sécurisation de sites & applications existants</div>
+            <div class="service-feature" data-fr="Conseil en stratégie digitale" data-en="Digital strategy consulting">Conseil en stratégie digitale</div>
+            <div class="service-feature" data-fr="Sensibilisation & bonnes pratiques pour vos équipes" data-en="Team awareness & best practices">Sensibilisation & bonnes pratiques pour vos équipes</div>
+          </div>
+          <div class="service-cta-row">
+            <a href="contact.html" class="btn btn-primary"><span data-fr="Demander un devis" data-en="Request a quote">Demander un devis</span> →</a>
+            <span class="service-quote-note" data-fr="Tarif sur devis" data-en="Price on request">Tarif sur devis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Formation & Éducation tech -->
+      <div class="service-block sb-6 reveal">
+        <div class="service-visual"><span>📚</span></div>
+        <div class="service-content">
+          <div class="service-number">06</div>
+          <div class="service-tag" data-fr="FORMATION" data-en="TRAINING">FORMATION</div>
+          <h2 data-fr="Formation & Éducation Tech" data-en="Training & Tech Education">Formation & Éducation Tech</h2>
+          <p data-fr="Nous construisons des outils et des formats qui démocratisent le savoir numérique — comme notre propre plateforme BiblioTech." data-en="We build tools and formats that democratize digital knowledge — like our own BiblioTech platform.">
+            Nous construisons des outils et des formats qui démocratisent le savoir numérique — comme notre propre plateforme BiblioTech.
+          </p>
+          <div class="service-features">
+            <div class="service-feature" data-fr="Ateliers & formations aux outils numériques" data-en="Workshops & digital tools training">Ateliers & formations aux outils numériques</div>
+            <div class="service-feature" data-fr="Plateformes e-learning & LMS sur mesure" data-en="Custom e-learning platforms & LMS">Plateformes e-learning & LMS sur mesure</div>
+            <div class="service-feature" data-fr="Bibliothèques numériques accessibles" data-en="Accessible digital libraries">Bibliothèques numériques accessibles</div>
+            <div class="service-feature" data-fr="Programmes de formation pour institutions" data-en="Training programs for institutions">Programmes de formation pour institutions</div>
+          </div>
+          <div class="service-cta-row">
+            <a href="contact.html" class="btn btn-primary"><span data-fr="Demander un devis" data-en="Request a quote">Demander un devis</span> →</a>
+            <span class="service-quote-note" data-fr="Tarif sur devis" data-en="Price on request">Tarif sur devis</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESSUS — 5 étapes -->
+  <section class="process-section">
+    <div class="process-inner">
+      <div class="process-header reveal">
+        <div class="section-label" style="justify-content:center;" data-fr="Comment nous travaillons" data-en="How we work">Comment nous travaillons</div>
+        <h2 class="section-title" style="font-size:clamp(1.9rem,3vw,2.6rem);"><span data-fr="Notre " data-en="Our ">Notre </span><span class="accent" data-fr="Processus" data-en="Process">Processus</span></h2>
+        <div class="divider" style="margin-left:auto;margin-right:auto;"></div>
+        <p style="color:var(--text-muted);" data-fr="Un déroulé simple et transparent, du premier échange à la livraison." data-en="A simple, transparent process, from first contact to delivery.">Un déroulé simple et transparent, du premier échange à la livraison.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <h5 data-fr="Écoute" data-en="Listen">Écoute</h5>
+          <p data-fr="Nous analysons vos besoins, vos objectifs et vos contraintes." data-en="We analyze your needs, goals and constraints.">Nous analysons vos besoins, vos objectifs et vos contraintes.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-num">02</div>
+          <h5 data-fr="Conception" data-en="Design">Conception</h5>
+          <p data-fr="Maquettes, architecture technique et devis détaillé." data-en="Mockups, technical architecture and detailed quote.">Maquettes, architecture technique et devis détaillé.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="step-num">03</div>
+          <h5 data-fr="Développement" data-en="Development">Développement</h5>
+          <p data-fr="Code propre, tests rigoureux, points d'étape réguliers." data-en="Clean code, rigorous testing, regular check-ins.">Code propre, tests rigoureux, points d'étape réguliers.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="step-num">04</div>
+          <h5 data-fr="Livraison" data-en="Delivery">Livraison</h5>
+          <p data-fr="Déploiement soigné et prise en main de votre équipe." data-en="Careful deployment and team onboarding.">Déploiement soigné et prise en main de votre équipe.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+          <div class="step-num">05</div>
+          <h5 data-fr="Suivi" data-en="Support">Suivi</h5>
+          <p data-fr="Support continu, corrections et évolutions si besoin." data-en="Ongoing support, fixes and future evolutions.">Support continu, corrections et évolutions si besoin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="services-cta">
+    <div class="services-cta-inner reveal">
+      <h2 data-fr="Un projet en tête ?" data-en="Got a project in mind?">Un projet en tête ?</h2>
+      <p data-fr="Chaque grand projet commence par une conversation. Décrivez-nous le vôtre, sans engagement." data-en="Every great project starts with a conversation. Tell us about yours, no strings attached.">
+        Chaque grand projet commence par une conversation. Décrivez-nous le vôtre, sans engagement.
+      </p>
+      <div class="services-cta-actions">
+        <a href="contact.html" class="btn btn-primary"><span data-fr="Demander un devis" data-en="Request a quote">Demander un devis</span> →</a>
+        <a href="../index.html#talents" class="btn btn-outline" style="border-color:rgba(255,255,255,.3); color:#fff;" data-fr="Rejoindre le réseau" data-en="Join the network">Rejoindre le réseau</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">
+        <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+          <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+          <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+        </svg>
+        <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+      </a>
+      <p data-fr="Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception." data-en="Tech studio based in Cotonou, Benin. We make technology accessible to everyone, without exception.">
+        Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception.
+      </p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+        </a>
+        <a href="https://instagram.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/tsadok-adido" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="https://github.com/FlashTsk17" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.4 9.4 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
+      <ul>
+        <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+        <li><a href="about.html" data-fr="À propos" data-en="About">À propos</a></li>
+        <li><a href="services.html" data-fr="Services" data-en="Services">Services</a></li>
+        <li><a href="portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+        <li><a href="blog.html" data-fr="Blog" data-en="Blog">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Services" data-en="Services">Services</h4>
+      <ul>
+        <li><a href="services.html" data-fr="Développement Web & Mobile" data-en="Web & Mobile Dev">Développement Web & Mobile</a></li>
+        <li><a href="services.html" data-fr="Design & Identité" data-en="Design & Identity">Design & Identité</a></li>
+        <li><a href="services.html" data-fr="Marketing Digital" data-en="Digital Marketing">Marketing Digital</a></li>
+        <li><a href="services.html" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</a></li>
+        <li><a href="services.html" data-fr="Formation Tech" data-en="Tech Training">Formation Tech</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+      <ul>
+        <li><a href="mailto:adidomahukpeou@gmail.com">📧 adidomahukpeou@gmail.com</a></li>
+        <li><a href="tel:+22901522711198">📱 +229 01 52 27 11 98</a></li>
+        <li><a href="tel:+22901603452165">📱 +229 01 60 34 52 65</a></li>
+        <li><a href="contact.html" data-fr="📍 Cotonou, Bénin" data-en="📍 Cotonou, Benin">📍 Cotonou, Bénin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span data-fr="© 2026 Tsk's Tech Services — Tous droits réservés" data-en="© 2026 Tsk's Tech Services — All rights reserved">© 2026 Tsk's Tech Services — Tous droits réservés</span>
+    <a href="mentions-legales.html" data-fr="Mentions légales & Confidentialité" data-en="Legal Notice & Privacy">Mentions légales & Confidentialité</a>
+    <span><span data-fr="Fondé par " data-en="Founded by ">Fondé par </span><strong>Tsadok Adido</strong></span>
+  </div>
+</footer>
+
+<script src="../js/global.js"></script>
+</body>
+</html>

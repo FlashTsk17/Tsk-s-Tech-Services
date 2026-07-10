@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Découvrez Tsk's Tech Services : mission, vision, valeurs et équipe d'un studio tech basé à Cotonou, Bénin, engagé pour l'accessibilité technologique en Afrique francophone."/>
+<title>À propos — Tsk's Tech Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"/>
+<link rel="stylesheet" href="../css/global.css"/>
+<link rel="canonical" href="https://tsks-tech-services.com/pages/about.html"/>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tsk's Tech Services"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:title" content="À propos — Tsk's Tech Services"/>
+<meta property="og:description" content="Découvrez Tsk's Tech Services : mission, vision, valeurs et équipe d'un studio tech basé à Cotonou, Bénin, engagé pour l'accessibilité technologique en Afrique francophone."/>
+<meta property="og:url" content="https://tsks-tech-services.com/pages/about.html"/>
+<meta property="og:image" content="https://tsks-tech-services.com/images/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="À propos — Tsk's Tech Services"/>
+<meta name="twitter:description" content="Découvrez Tsk's Tech Services : mission, vision, valeurs et équipe d'un studio tech basé à Cotonou, Bénin, engagé pour l'accessibilité technologique en Afrique francophone."/>
+<meta name="twitter:image" content="https://tsks-tech-services.com/images/og-image.png"/>
+<style>
+  .page-hero { min-height: 46vh; display: flex; align-items: flex-end; padding: calc(var(--nav-h) + 3.5rem) 4rem 3.5rem; position: relative; overflow: hidden; background: linear-gradient(160deg, var(--bg-alt) 0%, var(--bg) 65%); }
+  .page-hero-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+  .page-breadcrumb { display: flex; gap: .5rem; align-items: center; font-size: .78rem; font-weight: 500; color: var(--text-muted); margin-bottom: 1.4rem; }
+  .page-breadcrumb a { color: var(--violet-strong); }
+  .page-breadcrumb span { color: var(--border-strong); }
+  .page-hero h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 800; line-height: 1; margin-bottom: 1.1rem; }
+  .page-hero p { font-size: 1.02rem; color: var(--text-muted); max-width: 560px; line-height: 1.75; }
+
+  /* Mission / Vision */
+  .mission-section { padding: var(--section-pad); }
+  .mission-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; }
+  .mission-card { padding: 2.4rem; position: relative; overflow: hidden; }
+  .mission-card.m-mission { border-top: 3px solid var(--violet); }
+  .mission-card.m-vision { border-top: 3px solid var(--gold); }
+  .mission-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; }
+  .m-mission h3 { color: var(--violet-strong); }
+  .m-vision h3 { color: var(--gold-deep); }
+  .mission-card p { color: var(--text-muted); line-height: 1.8; font-size: .95rem; }
+
+  /* Valeurs */
+  .values-section { padding: var(--section-pad); background: var(--bg-alt); }
+  .values-inner { max-width: var(--max-w); margin: 0 auto; }
+  .values-header { text-align: center; max-width: 560px; margin: 0 auto 3.2rem; }
+  .values-header p { color: var(--text-muted); }
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.3rem; }
+  .value-card { padding: 1.8rem 1.6rem; text-align: left; }
+  .value-icon { width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1.1rem; background: var(--cyan-soft); }
+  .value-card h4 { font-size: .95rem; font-weight: 700; margin-bottom: .5rem; }
+  .value-card p { font-size: .82rem; color: var(--text-muted); line-height: 1.6; }
+
+  /* Équipe — approche généralisée par pôles */
+  .team-section { padding: var(--section-pad); }
+  .team-inner { max-width: var(--max-w); margin: 0 auto; }
+  .team-header { max-width: 620px; margin-bottom: 3rem; }
+  .team-header p { color: var(--text-muted); line-height: 1.75; }
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.6rem; }
+  .team-pole { padding: 2rem; }
+  .team-pole-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.2rem; background: linear-gradient(135deg, var(--violet), var(--gold)); color: #fff; }
+  .team-pole h4 { font-size: 1rem; font-weight: 700; margin-bottom: .6rem; }
+  .team-pole p { font-size: .85rem; color: var(--text-muted); line-height: 1.65; }
+  .team-credit {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    padding: 1.4rem 1.8rem; border-radius: var(--radius-md);
+    background: var(--surface-2); border: 1px solid var(--border);
+    font-size: .86rem; color: var(--text-muted);
+  }
+  .team-credit strong { color: var(--text); font-weight: 700; }
+  .team-credit a { color: var(--violet-strong); font-weight: 700; }
+  .team-credit a:hover { text-decoration: underline; }
+
+  /* Feuille de route */
+  .roadmap-section { padding: var(--section-pad); background: var(--bg-alt); }
+  .roadmap-inner { max-width: var(--max-w); margin: 0 auto; }
+  .roadmap-header { text-align: center; max-width: 560px; margin: 0 auto 3.2rem; }
+  .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; position: relative; }
+  .timeline::before { content: ''; position: absolute; top: 27px; left: 14%; right: 14%; height: 2px; background: linear-gradient(90deg, var(--violet), var(--gold), var(--cyan)); opacity: .5; }
+  .timeline-item { text-align: center; position: relative; }
+  .timeline-dot { width: 54px; height: 54px; border-radius: 50%; margin: 0 auto 1.3rem; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; position: relative; z-index: 1; background: var(--surface); border: 2px solid var(--border-strong); }
+  .tl-1 .timeline-dot { border-color: var(--violet); }
+  .tl-2 .timeline-dot { border-color: var(--gold); }
+  .tl-3 .timeline-dot { border-color: var(--cyan); }
+  .timeline-period { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .6rem; }
+  .tl-1 .timeline-period { color: var(--violet-strong); }
+  .tl-2 .timeline-period { color: var(--gold-deep); }
+  .tl-3 .timeline-period { color: var(--cyan); }
+  .timeline-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: .6rem; }
+  .timeline-item p { font-size: .84rem; color: var(--text-muted); line-height: 1.6; }
+
+  /* CTA finale */
+  .about-cta { padding: var(--section-pad); text-align: center; background: linear-gradient(160deg, var(--violet-deep), var(--bg)); }
+  [data-theme="dark"] .about-cta { background: linear-gradient(160deg, var(--violet-deep) 0%, var(--bg) 70%); }
+  .about-cta-inner { max-width: 640px; margin: 0 auto; }
+  .about-cta h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); color: #fff; margin-bottom: 1rem; }
+  [data-theme="dark"] .about-cta h2 { color: var(--text); }
+  .about-cta p { color: rgba(255,255,255,.75); margin-bottom: 2rem; }
+  [data-theme="dark"] .about-cta p { color: var(--text-muted); }
+  .about-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  @media (max-width: 1024px) {
+    .mission-inner { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr 1fr; }
+    .timeline { grid-template-columns: 1fr; }
+    .timeline::before { display: none; }
+  }
+  @media (max-width: 768px) {
+    .page-hero { padding: calc(var(--nav-h) + 2rem) 1.5rem 2.5rem; }
+    .team-grid { grid-template-columns: 1fr; }
+    .team-credit { flex-direction: column; align-items: flex-start; text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true"/>
+
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">
+    <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+      <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+      <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+    </svg>
+    <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+    <li><a href="about.html" class="active" data-fr="À propos" data-en="About">À propos</a></li>
+    <li><a href="services.html" data-fr="Services" data-en="Services">Services</a></li>
+    <li><a href="portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+    <li><a href="blog.html" data-fr="Blog" data-en="Blog">Blog</a></li>
+    <li><a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <div class="lang-toggle">
+      <button class="lang-btn" data-lang="fr" type="button">FR</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+    <button class="theme-toggle" type="button" aria-label="Basculer le thème clair / sombre">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
+    <a href="contact.html" class="nav-cta"><span data-fr="Nous contacter" data-en="Contact us">Nous contacter</span></a>
+    <label for="nav-toggle" class="nav-burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
+  </div>
+</nav>
+
+<div class="nav-drawer-scrim"></div>
+<div class="nav-drawer">
+  <a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="about.html" class="active" data-fr="À propos" data-en="About">À propos</a>
+  <a href="services.html" data-fr="Services" data-en="Services">Services</a>
+  <a href="portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a>
+  <a href="blog.html" data-fr="Blog" data-en="Blog">Blog</a>
+  <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  <div class="lang-toggle" style="margin-top:.4rem;">
+    <button class="lang-btn" data-lang="fr" type="button">FR</button>
+    <button class="lang-btn" data-lang="en" type="button">EN</button>
+  </div>
+  <a href="contact.html" class="btn btn-primary"><span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="orb" style="width:480px;height:480px;background:radial-gradient(circle,rgba(91,43,196,.14) 0%,transparent 70%);top:-140px;right:-140px;"></div>
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb">
+        <a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a><span>/</span>
+        <span data-fr="À propos" data-en="About">À propos</span>
+      </div>
+      <h1><span data-fr="Notre " data-en="Our ">Notre </span><span style="color:var(--gold);" data-fr="Histoire" data-en="Story">Histoire</span></h1>
+      <p data-fr="Un studio tech ancré à Cotonou, porté par une équipe qui croit que la technologie n'a de valeur que si elle profite à tous." data-en="A tech studio rooted in Cotonou, driven by a team that believes technology only matters if it benefits everyone.">
+        Un studio tech ancré à Cotonou, porté par une équipe qui croit que la technologie n'a de valeur que si elle profite à tous.
+      </p>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION -->
+  <section class="mission-section">
+    <div class="mission-inner">
+      <div class="mission-card m-mission card reveal">
+        <div class="section-label" data-fr="Notre Mission" data-en="Our Mission">Notre Mission</div>
+        <h3 data-fr="🚀 La tech pour tous" data-en="🚀 Tech for everyone">🚀 La tech pour tous</h3>
+        <p data-fr="Chez Tsk's Tech Services, nous croyons que la technologie ne doit pas être un privilège réservé à quelques-uns. Notre mission est de la rendre accessible à tous — élèves, étudiants, particuliers, entreprises et institutions — pour qu'elle serve concrètement leur quotidien, leur travail et leur avenir." data-en="At Tsk's Tech Services, we believe technology should not be a privilege reserved for a few. Our mission is to make it accessible to everyone — students, individuals, businesses and institutions — so it concretely serves their daily life, work and future.">
+          Chez Tsk's Tech Services, nous croyons que la technologie ne doit pas être un privilège réservé à quelques-uns. Notre mission est de la rendre accessible à tous — élèves, étudiants, particuliers, entreprises et institutions — pour qu'elle serve concrètement leur quotidien, leur travail et leur avenir.
+        </p>
+      </div>
+      <div class="mission-card m-vision card reveal reveal-delay-1">
+        <div class="section-label" data-fr="Notre Vision" data-en="Our Vision">Notre Vision</div>
+        <h3 data-fr="🌟 Fin à l'analphabétisme numérique" data-en="🌟 Ending digital illiteracy">🌟 Fin à l'analphabétisme numérique</h3>
+        <p data-fr="Nous voulons mettre fin à l'analphabétisme numérique en Afrique francophone et au-delà. Notre ambition est de devenir un acteur de proximité innovant, reconnu dans la sous-région et respecté à l'international, en offrant des solutions technologiques qui transforment réellement des vies." data-en="We want to end digital illiteracy in French-speaking Africa and beyond. Our ambition is to become an innovative local player, recognized across the sub-region and respected internationally, by offering technology solutions that genuinely transform lives.">
+          Nous voulons mettre fin à l'analphabétisme numérique en Afrique francophone et au-delà. Notre ambition est de devenir un acteur de proximité innovant, reconnu dans la sous-région et respecté à l'international, en offrant des solutions technologiques qui transforment réellement des vies.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALEURS -->
+  <section class="values-section">
+    <div class="values-inner">
+      <div class="values-header reveal">
+        <div class="section-label" style="justify-content:center;" data-fr="Ce qui nous guide" data-en="What guides us">Ce qui nous guide</div>
+        <h2 class="section-title" style="font-size:clamp(1.9rem,3vw,2.6rem);"><span data-fr="Nos " data-en="Our ">Nos </span><span class="accent" data-fr="Valeurs" data-en="Values">Valeurs</span></h2>
+        <div class="divider" style="margin-left:auto;margin-right:auto;"></div>
+      </div>
+      <div class="values-grid">
+        <div class="value-card card reveal">
+          <div class="value-icon">🔥</div>
+          <h4 data-fr="Innovation" data-en="Innovation">Innovation</h4>
+          <p data-fr="Toujours à la recherche de solutions nouvelles, adaptées aux réalités africaines." data-en="Always looking for new solutions adapted to African realities.">Toujours à la recherche de solutions nouvelles, adaptées aux réalités africaines.</p>
+        </div>
+        <div class="value-card card reveal reveal-delay-1">
+          <div class="value-icon">🌍</div>
+          <h4 data-fr="Accessibilité" data-en="Accessibility">Accessibilité</h4>
+          <p data-fr="Des services pensés pour être à la portée de tous, sans exception." data-en="Services designed to be within everyone's reach, without exception.">Des services pensés pour être à la portée de tous, sans exception.</p>
+        </div>
+        <div class="value-card card reveal reveal-delay-2">
+          <div class="value-icon">💚</div>
+          <h4 data-fr="Impact Social" data-en="Social Impact">Impact Social</h4>
+          <p data-fr="Contribuer à l'inclusion numérique et à l'éducation technologique en Afrique." data-en="Contributing to digital inclusion and technology education in Africa.">Contribuer à l'inclusion numérique et à l'éducation technologique en Afrique.</p>
+        </div>
+        <div class="value-card card reveal reveal-delay-3">
+          <div class="value-icon">🤝</div>
+          <h4 data-fr="Confiance" data-en="Trust">Confiance</h4>
+          <p data-fr="Des relations durables avec nos clients, bâties sur la transparence." data-en="Lasting relationships with our clients, built on transparency.">Des relations durables avec nos clients, bâties sur la transparence.</p>
+        </div>
+        <div class="value-card card reveal reveal-delay-4">
+          <div class="value-icon">⭐</div>
+          <h4 data-fr="Excellence" data-en="Excellence">Excellence</h4>
+          <p data-fr="Un niveau d'exigence constant, du premier brief à la livraison finale." data-en="A consistent standard of quality, from the first brief to final delivery.">Un niveau d'exigence constant, du premier brief à la livraison finale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉQUIPE — généralisée par pôles -->
+  <section class="team-section">
+    <div class="team-inner">
+      <div class="team-header reveal">
+        <div class="section-label" data-fr="Qui sommes-nous" data-en="Who we are">Qui sommes-nous</div>
+        <h2 class="section-title" style="font-size:clamp(1.9rem,3vw,2.6rem);"><span data-fr="Une équipe, " data-en="One team, ">Une équipe, </span><span class="accent-2" data-fr="une vision commune" data-en="one shared vision">une vision commune</span></h2>
+        <div class="divider"></div>
+        <p data-fr="Derrière chaque projet Tsk's Tech Services, une équipe pluridisciplinaire qui combine expertise technique, sens du design et connaissance fine du contexte africain." data-en="Behind every Tsk's Tech Services project stands a multidisciplinary team combining technical expertise, design sense and deep knowledge of the African context.">
+          Derrière chaque projet Tsk's Tech Services, une équipe pluridisciplinaire qui combine expertise technique, sens du design et connaissance fine du contexte africain.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-pole card reveal">
+          <div class="team-pole-icon">💻</div>
+          <h4 data-fr="Développement & Architecture" data-en="Development & Architecture">Développement & Architecture</h4>
+          <p data-fr="Sites, applications et plateformes construits avec des standards de code propre et de sécurité." data-en="Sites, applications and platforms built with clean code and security standards.">Sites, applications et plateformes construits avec des standards de code propre et de sécurité.</p>
+        </div>
+        <div class="team-pole card reveal reveal-delay-1">
+          <div class="team-pole-icon">🎨</div>
+          <h4 data-fr="Design & Créativité" data-en="Design & Creativity">Design & Créativité</h4>
+          <p data-fr="Identités visuelles et interfaces qui donnent à chaque marque une présence mémorable." data-en="Visual identities and interfaces that give every brand a memorable presence.">Identités visuelles et interfaces qui donnent à chaque marque une présence mémorable.</p>
+        </div>
+        <div class="team-pole card reveal reveal-delay-2">
+          <div class="team-pole-icon">📈</div>
+          <h4 data-fr="Stratégie & Relation Client" data-en="Strategy & Client Relations">Stratégie & Relation Client</h4>
+          <p data-fr="Conseil digital, suivi de projet et accompagnement du premier échange à la livraison." data-en="Digital consulting, project follow-up and support from first contact to delivery.">Conseil digital, suivi de projet et accompagnement du premier échange à la livraison.</p>
+        </div>
+      </div>
+
+      <div class="team-credit reveal">
+        <span><strong data-fr="Fondé par Tsadok Adido" data-en="Founded by Tsadok Adido">Fondé par Tsadok Adido</strong> <span data-fr="(Fondateur & CEO) et ses associés." data-en="(Founder & CEO) and his associates.">(Fondateur & CEO) et ses associés.</span></span>
+        <a href="../index.html#talents" data-fr="Rejoindre l'équipe →" data-en="Join the team →">Rejoindre l'équipe →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEUILLE DE ROUTE -->
+  <section class="roadmap-section">
+    <div class="roadmap-inner">
+      <div class="roadmap-header reveal">
+        <div class="section-label" style="justify-content:center;" data-fr="Notre feuille de route" data-en="Our roadmap">Notre feuille de route</div>
+        <h2 class="section-title" style="font-size:clamp(1.9rem,3vw,2.6rem);"><span data-fr="Nos " data-en="Our ">Nos </span><span class="accent" data-fr="Objectifs" data-en="Goals">Objectifs</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item tl-1 reveal">
+          <div class="timeline-dot">🎯</div>
+          <div class="timeline-period" data-fr="Court terme" data-en="Short term">Court terme</div>
+          <h4 data-fr="Visibilité & Notoriété" data-en="Visibility & Awareness">Visibilité & Notoriété</h4>
+          <p data-fr="Faire connaître notre vision et nos services dans la sous-région ouest-africaine." data-en="Spread awareness of our vision and services across the West African sub-region.">Faire connaître notre vision et nos services dans la sous-région ouest-africaine.</p>
+        </div>
+        <div class="timeline-item tl-2 reveal reveal-delay-1">
+          <div class="timeline-dot">📈</div>
+          <div class="timeline-period" data-fr="Moyen terme" data-en="Medium term">Moyen terme</div>
+          <h4 data-fr="Conquête du Marché" data-en="Market Growth">Conquête du Marché</h4>
+          <p data-fr="Grandir par la confiance, l'efficacité et des partenariats stratégiques solides." data-en="Grow through trust, efficiency and solid strategic partnerships.">Grandir par la confiance, l'efficacité et des partenariats stratégiques solides.</p>
+        </div>
+        <div class="timeline-item tl-3 reveal reveal-delay-2">
+          <div class="timeline-dot">🌍</div>
+          <div class="timeline-period" data-fr="Long terme" data-en="Long term">Long terme</div>
+          <h4 data-fr="Référence Internationale" data-en="International Reference">Référence Internationale</h4>
+          <p data-fr="Devenir une référence en accessibilité technologique et innovation sociale." data-en="Become a reference in technological accessibility and social innovation.">Devenir une référence en accessibilité technologique et innovation sociale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta">
+    <div class="about-cta-inner reveal">
+      <h2 data-fr="Envie de construire avec nous ?" data-en="Want to build with us?">Envie de construire avec nous ?</h2>
+      <p data-fr="Que vous ayez un projet à lancer ou une expertise à apporter, parlons-en." data-en="Whether you have a project to launch or expertise to bring, let's talk.">Que vous ayez un projet à lancer ou une expertise à apporter, parlons-en.</p>
+      <div class="about-cta-actions">
+        <a href="contact.html" class="btn btn-primary"><span data-fr="Nous contacter" data-en="Contact us">Nous contacter</span> →</a>
+        <a href="portfolio.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.3); color:#fff;" data-fr="Voir nos projets" data-en="See our projects">Voir nos projets</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">
+        <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+          <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+          <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+        </svg>
+        <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+      </a>
+      <p data-fr="Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception." data-en="Tech studio based in Cotonou, Benin. We make technology accessible to everyone, without exception.">
+        Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception.
+      </p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+        </a>
+        <a href="https://instagram.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/tsadok-adido" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="https://github.com/FlashTsk17" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.4 9.4 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
+      <ul>
+        <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+        <li><a href="about.html" data-fr="À propos" data-en="About">À propos</a></li>
+        <li><a href="services.html" data-fr="Services" data-en="Services">Services</a></li>
+        <li><a href="portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+        <li><a href="blog.html" data-fr="Blog" data-en="Blog">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Services" data-en="Services">Services</h4>
+      <ul>
+        <li><a href="services.html" data-fr="Développement Web & Mobile" data-en="Web & Mobile Dev">Développement Web & Mobile</a></li>
+        <li><a href="services.html" data-fr="Design & Identité" data-en="Design & Identity">Design & Identité</a></li>
+        <li><a href="services.html" data-fr="Marketing Digital" data-en="Digital Marketing">Marketing Digital</a></li>
+        <li><a href="services.html" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</a></li>
+        <li><a href="services.html" data-fr="Formation Tech" data-en="Tech Training">Formation Tech</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+      <ul>
+        <li><a href="mailto:adidomahukpeou@gmail.com">📧 adidomahukpeou@gmail.com</a></li>
+        <li><a href="tel:+22901522711198">📱 +229 01 52 27 11 98</a></li>
+        <li><a href="tel:+22901603452165">📱 +229 01 60 34 52 65</a></li>
+        <li><a href="contact.html" data-fr="📍 Cotonou, Bénin" data-en="📍 Cotonou, Benin">📍 Cotonou, Bénin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span data-fr="© 2026 Tsk's Tech Services — Tous droits réservés" data-en="© 2026 Tsk's Tech Services — All rights reserved">© 2026 Tsk's Tech Services — Tous droits réservés</span>
+    <a href="mentions-legales.html" data-fr="Mentions légales & Confidentialité" data-en="Legal Notice & Privacy">Mentions légales & Confidentialité</a>
+    <span><span data-fr="Fondé par " data-en="Founded by ">Fondé par </span><strong>Tsadok Adido</strong></span>
+  </div>
+</footer>
+
+<script src="../js/global.js"></script>
+</body>
+</html>

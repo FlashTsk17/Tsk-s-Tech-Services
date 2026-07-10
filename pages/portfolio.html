@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Découvrez les réalisations de Tsk's Tech Services : BiblioTech, Mary Stella Couture, Juliette's Cosmetics, My Personality Quiz, CélébrationsLink et plus."/>
+<title>Nos Réalisations — Tsk's Tech Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"/>
+<link rel="stylesheet" href="../css/global.css"/>
+<link rel="canonical" href="https://tsks-tech-services.com/pages/portfolio.html"/>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tsk's Tech Services"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:title" content="Nos Réalisations — Tsk's Tech Services"/>
+<meta property="og:description" content="Découvrez les réalisations de Tsk's Tech Services : BiblioTech, Mary Stella Couture, Juliette's Cosmetics, My Personality Quiz, CélébrationsLink et plus."/>
+<meta property="og:url" content="https://tsks-tech-services.com/pages/portfolio.html"/>
+<meta property="og:image" content="https://tsks-tech-services.com/images/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Nos Réalisations — Tsk's Tech Services"/>
+<meta name="twitter:description" content="Découvrez les réalisations de Tsk's Tech Services : BiblioTech, Mary Stella Couture, Juliette's Cosmetics, My Personality Quiz, CélébrationsLink et plus."/>
+<meta name="twitter:image" content="https://tsks-tech-services.com/images/og-image.png"/>
+<style>
+  .page-hero { min-height: 42vh; display: flex; align-items: flex-end; padding: calc(var(--nav-h) + 3rem) 4rem 3rem; position: relative; overflow: hidden; background: linear-gradient(160deg, var(--bg-alt) 0%, var(--bg) 65%); }
+  .page-hero-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+  .page-breadcrumb { display: flex; gap: .5rem; align-items: center; font-size: .78rem; font-weight: 500; color: var(--text-muted); margin-bottom: 1.4rem; }
+  .page-breadcrumb a { color: var(--violet-strong); }
+  .page-breadcrumb span { color: var(--border-strong); }
+  .page-hero h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 800; line-height: 1; margin-bottom: 1.1rem; }
+  .page-hero p { font-size: 1.02rem; color: var(--text-muted); max-width: 560px; line-height: 1.75; }
+
+  /* Filtres */
+  .portfolio-filters { max-width: var(--max-w); margin: 0 auto; padding: 2.4rem 4rem 0; display: flex; gap: .7rem; flex-wrap: wrap; }
+  .filter-btn { padding: .5rem 1.2rem; border-radius: 100px; font-size: .78rem; font-weight: 600; color: var(--text-muted); border: 1px solid var(--border); background: var(--surface); transition: all .25s; }
+  .filter-btn.active, .filter-btn:hover { background: var(--violet); color: var(--on-violet); border-color: var(--violet); }
+
+  /* Grille */
+  .portfolio-section { padding: 2.6rem 4rem var(--section-pad); }
+  .portfolio-inner { max-width: var(--max-w); margin: 0 auto; }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+  .pf-card { overflow: hidden; display: flex; flex-direction: column; }
+  .pf-card.featured { grid-column: span 2; }
+  .pf-thumb { aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; position: relative; }
+  .pf-card.featured .pf-thumb { aspect-ratio: 2/1; }
+  .pf-thumb span.pf-icon { font-size: 3.2rem; filter: drop-shadow(0 4px 12px rgba(0,0,0,.2)); }
+  .pf-1 .pf-thumb { background: linear-gradient(150deg, var(--violet), var(--violet-deep)); }
+  .pf-2 .pf-thumb { background: linear-gradient(150deg, var(--gold), var(--gold-deep)); }
+  .pf-3 .pf-thumb { background: linear-gradient(150deg, #B23A6B, #7A2148); }
+  .pf-4 .pf-thumb { background: linear-gradient(150deg, #007A6B, #004F45); }
+  .pf-5 .pf-thumb { background: linear-gradient(150deg, var(--violet-strong), var(--gold-deep)); }
+  .pf-status { position: absolute; top: .9rem; right: .9rem; font-size: .64rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: .28rem .65rem; border-radius: 100px; background: rgba(255,255,255,.92); color: #170F2E; }
+  .pf-body { padding: 1.5rem 1.6rem 1.7rem; flex: 1; display: flex; flex-direction: column; }
+  .pf-tags { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: .8rem; }
+  .pf-tag { font-size: .66rem; font-weight: 700; letter-spacing: .04em; padding: .22rem .6rem; border-radius: 100px; background: var(--cyan-soft); color: var(--cyan); }
+  .pf-body h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: .55rem; }
+  .pf-body p { font-size: .85rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; flex: 1; }
+  .pf-meta { display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--border); font-size: .78rem; }
+  .pf-client { color: var(--text-soft); }
+  .pf-link { color: var(--violet-strong); font-weight: 700; }
+  .pf-link:hover { text-decoration: underline; }
+  .pf-nolink { color: var(--text-soft); font-style: italic; }
+
+  /* Carte "coming soon" */
+  .pf-coming { border: 2px dashed var(--border-strong); background: transparent; }
+  .pf-coming .pf-thumb { background: var(--bg-alt); }
+  .pf-coming .pf-thumb span { opacity: .35; font-size: 2.6rem; }
+
+  /* CTA final */
+  .portfolio-cta { padding: var(--section-pad); text-align: center; background: linear-gradient(160deg, var(--violet-deep), var(--bg)); }
+  [data-theme="dark"] .portfolio-cta { background: linear-gradient(160deg, var(--violet-deep) 0%, var(--bg) 70%); }
+  .portfolio-cta-inner { max-width: 640px; margin: 0 auto; }
+  .portfolio-cta h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); color: #fff; margin-bottom: 1rem; }
+  [data-theme="dark"] .portfolio-cta h2 { color: var(--text); }
+  .portfolio-cta p { color: rgba(255,255,255,.75); margin-bottom: 2rem; }
+  [data-theme="dark"] .portfolio-cta p { color: var(--text-muted); }
+  .portfolio-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  @media (max-width: 1024px) {
+    .portfolio-filters, .portfolio-section { padding-left: 2rem; padding-right: 2rem; }
+    .portfolio-grid { grid-template-columns: 1fr 1fr; }
+    .pf-card.featured { grid-column: span 2; }
+  }
+  @media (max-width: 768px) {
+    .page-hero { padding: calc(var(--nav-h) + 2rem) 1.5rem 2.5rem; }
+    .portfolio-filters, .portfolio-section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .pf-card.featured { grid-column: span 1; }
+  }
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true"/>
+
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">
+    <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+      <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+      <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+    </svg>
+    <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+    <li><a href="about.html" data-fr="À propos" data-en="About">À propos</a></li>
+    <li><a href="services.html" data-fr="Services" data-en="Services">Services</a></li>
+    <li><a href="portfolio.html" class="active" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+    <li><a href="blog.html" data-fr="Blog" data-en="Blog">Blog</a></li>
+    <li><a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <div class="lang-toggle">
+      <button class="lang-btn" data-lang="fr" type="button">FR</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+    <button class="theme-toggle" type="button" aria-label="Basculer le thème clair / sombre">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
+    <a href="contact.html" class="nav-cta"><span data-fr="Nous contacter" data-en="Contact us">Nous contacter</span></a>
+    <label for="nav-toggle" class="nav-burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
+  </div>
+</nav>
+
+<div class="nav-drawer-scrim"></div>
+<div class="nav-drawer">
+  <a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="about.html" data-fr="À propos" data-en="About">À propos</a>
+  <a href="services.html" data-fr="Services" data-en="Services">Services</a>
+  <a href="portfolio.html" class="active" data-fr="Réalisations" data-en="Work">Réalisations</a>
+  <a href="blog.html" data-fr="Blog" data-en="Blog">Blog</a>
+  <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  <div class="lang-toggle" style="margin-top:.4rem;">
+    <button class="lang-btn" data-lang="fr" type="button">FR</button>
+    <button class="lang-btn" data-lang="en" type="button">EN</button>
+  </div>
+  <a href="contact.html" class="btn btn-primary"><span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="orb" style="width:480px;height:480px;background:radial-gradient(circle,rgba(91,43,196,.14) 0%,transparent 70%);top:-140px;right:-140px;"></div>
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb">
+        <a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a><span>/</span>
+        <span data-fr="Réalisations" data-en="Work">Réalisations</span>
+      </div>
+      <h1><span data-fr="Nos " data-en="Our ">Nos </span><span style="color:var(--gold);" data-fr="Réalisations" data-en="Work">Réalisations</span></h1>
+      <p data-fr="Des projets concrets, livrés avec rigueur. Chaque ligne de code reflète notre engagement envers nos clients." data-en="Concrete projects, delivered with rigor. Every line of code reflects our commitment to our clients.">
+        Des projets concrets, livrés avec rigueur. Chaque ligne de code reflète notre engagement envers nos clients.
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTRES -->
+  <div class="portfolio-filters reveal">
+    <button class="filter-btn active" data-filter="all" type="button" data-fr="Tous" data-en="All">Tous</button>
+    <button class="filter-btn" data-filter="web" type="button" data-fr="Sites Web" data-en="Websites">Sites Web</button>
+    <button class="filter-btn" data-filter="platform" type="button" data-fr="Plateformes" data-en="Platforms">Plateformes</button>
+    <button class="filter-btn" data-filter="app" type="button" data-fr="Applications" data-en="Apps">Applications</button>
+    <button class="filter-btn" data-filter="design" type="button" data-fr="Identité Visuelle" data-en="Visual Identity">Identité Visuelle</button>
+  </div>
+
+  <!-- GRILLE PROJETS -->
+  <section class="portfolio-section">
+    <div class="portfolio-inner">
+      <div class="portfolio-grid">
+
+        <!-- BiblioTech — featured, projet propre -->
+        <div class="pf-card card featured pf-1 reveal" data-cat="platform">
+          <div class="pf-thumb"><span class="pf-icon">📚</span><span class="pf-status" data-fr="Projet propre" data-en="Own product">Projet propre</span></div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag" data-fr="Plateforme" data-en="Platform">Plateforme</span>
+              <span class="pf-tag" data-fr="E-learning" data-en="E-learning">E-learning</span>
+            </div>
+            <h3>Tsk's BiblioTech</h3>
+            <p data-fr="Bibliothèque numérique et plateforme e-learning pensée pour les étudiants d'Afrique de l'Ouest : catalogue, espace membres et tableau de bord." data-en="Digital library and e-learning platform designed for West African students: catalog, member area and dashboard.">
+              Bibliothèque numérique et plateforme e-learning pensée pour les étudiants d'Afrique de l'Ouest : catalogue, espace membres et tableau de bord.
+            </p>
+            <div class="pf-meta">
+              <span class="pf-client" data-fr="Projet interne Tsk's Tech" data-en="Internal Tsk's Tech project">Projet interne Tsk's Tech</span>
+              <span class="pf-nolink" data-fr="Bientôt en ligne" data-en="Coming online soon">Bientôt en ligne</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mary Stella Couture — prestation d'identité visuelle (pas de site web associé) -->
+        <div class="pf-card card pf-2 reveal reveal-delay-1" data-cat="design">
+          <div class="pf-thumb"><span class="pf-icon">🎨</span><span class="pf-status" data-fr="Identité livrée" data-en="Identity delivered">Identité livrée</span></div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag" data-fr="Identité Visuelle" data-en="Visual Identity">Identité Visuelle</span>
+              <span class="pf-tag" data-fr="Couture" data-en="Fashion">Couture</span>
+            </div>
+            <h3>Mary Stella Couture</h3>
+            <p data-fr="Création d'identité visuelle complète pour une marque de couture : logo, charte graphique et univers de marque cohérent sur tous les supports." data-en="Full visual identity creation for a couture brand: logo, brand guidelines and a consistent brand universe across all media.">
+              Création d'identité visuelle complète pour une marque de couture : logo, charte graphique et univers de marque cohérent sur tous les supports.
+            </p>
+            <div class="pf-meta">
+              <span class="pf-client" data-fr="Client Couture" data-en="Fashion Client">Client Couture</span>
+              <span class="pf-nolink" data-fr="Prestation design" data-en="Design service">Prestation design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juliette's Cosmetics — live -->
+        <div class="pf-card card pf-3 reveal reveal-delay-2" data-cat="web">
+          <div class="pf-thumb"><span class="pf-icon">💄</span><span class="pf-status" data-fr="En ligne" data-en="Live">En ligne</span></div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag" data-fr="E-commerce" data-en="E-commerce">E-commerce</span>
+              <span class="pf-tag" data-fr="Cosmétiques" data-en="Cosmetics">Cosmétiques</span>
+            </div>
+            <h3>Juliette's Cosmetics</h3>
+            <p data-fr="Site vitrine élégant pour une marque de cosmétiques basée au Togo, avec catalogue produits et animations soignées." data-en="Elegant showcase site for a Togo-based cosmetics brand, with product catalog and refined animations.">
+              Site vitrine élégant pour une marque de cosmétiques basée au Togo, avec catalogue produits et animations soignées.
+            </p>
+            <div class="pf-meta">
+              <span class="pf-client" data-fr="Client Cosmétiques" data-en="Cosmetics Client">Client Cosmétiques</span>
+              <a href="https://juliette-s-cosmetics-shop.vercel.app/" target="_blank" rel="noopener" class="pf-link" data-fr="Voir le site →" data-en="View site →">Voir le site →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- My Personality Quiz — live -->
+        <div class="pf-card card pf-4 reveal reveal-delay-3" data-cat="app">
+          <div class="pf-thumb"><span class="pf-icon">🧠</span><span class="pf-status" data-fr="En ligne" data-en="Live">En ligne</span></div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag" data-fr="Application Web" data-en="Web App">Application Web</span>
+              <span class="pf-tag">MBTI</span>
+            </div>
+            <h3 data-fr="My Personality Quiz" data-en="My Personality Quiz">My Personality Quiz</h3>
+            <p data-fr="Application interactive de quiz de personnalité, 16 types façon MBTI avec résultats détaillés et expérience fluide." data-en="Interactive personality quiz app, 16 MBTI-style types with detailed results and a smooth experience.">
+              Application interactive de quiz de personnalité, 16 types façon MBTI avec résultats détaillés et expérience fluide.
+            </p>
+            <div class="pf-meta">
+              <span class="pf-client" data-fr="Projet interne Tsk's Tech" data-en="Internal Tsk's Tech project">Projet interne Tsk's Tech</span>
+              <a href="https://my-personnality.vercel.app/personalitytypes" target="_blank" rel="noopener" class="pf-link" data-fr="Tester l'app →" data-en="Try the app →">Tester l'app →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CélébrationsLink — live -->
+        <div class="pf-card card pf-5 reveal reveal-delay-4" data-cat="platform">
+          <div class="pf-thumb"><span class="pf-icon">🎉</span><span class="pf-status" data-fr="En ligne" data-en="Live">En ligne</span></div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag" data-fr="Plateforme" data-en="Platform">Plateforme</span>
+              <span class="pf-tag" data-fr="Événementiel" data-en="Events">Événementiel</span>
+            </div>
+            <h3>CélébrationsLink</h3>
+            <p data-fr="Plateforme de mise en relation pour l'organisation d'événements et de célébrations, du particulier au prestataire." data-en="Connection platform for organizing events and celebrations, from individuals to service providers.">
+              Plateforme de mise en relation pour l'organisation d'événements et de célébrations, du particulier au prestataire.
+            </p>
+            <div class="pf-meta">
+              <span class="pf-client" data-fr="Projet interne Tsk's Tech" data-en="Internal Tsk's Tech project">Projet interne Tsk's Tech</span>
+              <a href="https://celebrations-link.vercel.app/" target="_blank" rel="noopener" class="pf-link" data-fr="Voir le site →" data-en="View site →">Voir le site →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coming soon -->
+        <div class="pf-card card pf-coming reveal reveal-delay-4" data-cat="">
+          <div class="pf-thumb"><span class="pf-icon">✦</span></div>
+          <div class="pf-body">
+            <div class="pf-tags"><span class="pf-tag" data-fr="En cours" data-en="In progress">En cours</span></div>
+            <h3 data-fr="Votre prochain projet ?" data-en="Your next project?">Votre prochain projet ?</h3>
+            <p data-fr="Ce slot vous est réservé. Parlons de ce qu'on peut construire ensemble." data-en="This slot is reserved for you. Let's talk about what we can build together.">
+              Ce slot vous est réservé. Parlons de ce qu'on peut construire ensemble.
+            </p>
+            <div class="pf-meta">
+              <a href="contact.html" class="pf-link" data-fr="Démarrer →" data-en="Start →">Démarrer →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="portfolio-cta">
+    <div class="portfolio-cta-inner reveal">
+      <h2 data-fr="Votre projet, notre prochaine réalisation" data-en="Your project, our next success story">Votre projet, notre prochaine réalisation</h2>
+      <p data-fr="Idée précise ou simple intuition, on en discute et on construit ensemble." data-en="A clear idea or just an instinct — let's talk and build it together.">
+        Idée précise ou simple intuition, on en discute et on construit ensemble.
+      </p>
+      <div class="portfolio-cta-actions">
+        <a href="contact.html" class="btn btn-primary"><span data-fr="Démarrer mon projet" data-en="Start my project">Démarrer mon projet</span> →</a>
+        <a href="services.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.3); color:#fff;" data-fr="Voir nos services" data-en="See our services">Voir nos services</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">
+        <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+          <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+          <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+        </svg>
+        <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+      </a>
+      <p data-fr="Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception." data-en="Tech studio based in Cotonou, Benin. We make technology accessible to everyone, without exception.">
+        Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception.
+      </p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+        </a>
+        <a href="https://instagram.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/tsadok-adido" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="https://github.com/FlashTsk17" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.4 9.4 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
+      <ul>
+        <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+        <li><a href="about.html" data-fr="À propos" data-en="About">À propos</a></li>
+        <li><a href="services.html" data-fr="Services" data-en="Services">Services</a></li>
+        <li><a href="portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+        <li><a href="blog.html" data-fr="Blog" data-en="Blog">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Services" data-en="Services">Services</h4>
+      <ul>
+        <li><a href="services.html" data-fr="Développement Web & Mobile" data-en="Web & Mobile Dev">Développement Web & Mobile</a></li>
+        <li><a href="services.html" data-fr="Design & Identité" data-en="Design & Identity">Design & Identité</a></li>
+        <li><a href="services.html" data-fr="Marketing Digital" data-en="Digital Marketing">Marketing Digital</a></li>
+        <li><a href="services.html" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</a></li>
+        <li><a href="services.html" data-fr="Formation Tech" data-en="Tech Training">Formation Tech</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+      <ul>
+        <li><a href="mailto:adidomahukpeou@gmail.com">📧 adidomahukpeou@gmail.com</a></li>
+        <li><a href="tel:+22901522711198">📱 +229 01 52 27 11 98</a></li>
+        <li><a href="tel:+22901603452165">📱 +229 01 60 34 52 65</a></li>
+        <li><a href="contact.html" data-fr="📍 Cotonou, Bénin" data-en="📍 Cotonou, Benin">📍 Cotonou, Bénin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span data-fr="© 2026 Tsk's Tech Services — Tous droits réservés" data-en="© 2026 Tsk's Tech Services — All rights reserved">© 2026 Tsk's Tech Services — Tous droits réservés</span>
+    <a href="mentions-legales.html" data-fr="Mentions légales & Confidentialité" data-en="Legal Notice & Privacy">Mentions légales & Confidentialité</a>
+    <span><span data-fr="Fondé par " data-en="Founded by ">Fondé par </span><strong>Tsadok Adido</strong></span>
+  </div>
+</footer>
+
+<script src="../js/global.js"></script>
+<script>
+  // Filtre de la grille — enhancement JS uniquement, toutes les cartes restent visibles sans JS
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.pf-card[data-cat]').forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.cat === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
