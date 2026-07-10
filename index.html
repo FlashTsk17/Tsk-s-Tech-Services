@@ -120,9 +120,10 @@
   .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
   .project-card { overflow: hidden; }
   .project-thumb { height: 170px; display: flex; align-items: center; justify-content: center; font-size: 2.6rem; position: relative; }
-  .pj-1 .project-thumb { background: linear-gradient(135deg, var(--violet), var(--violet-deep)); }
-  .pj-2 .project-thumb { background: linear-gradient(135deg, var(--gold), var(--gold-deep)); }
-  .pj-3 .project-thumb { background: linear-gradient(135deg, var(--cyan), #005f54); }
+  /* Même convention de noms que portfolio.html : dépose le fichier, il apparaît seul */
+  .pj-1 .project-thumb { background-image: url('images/portfolio/bibliotech.jpg'), url('images/portfolio/bibliotech.png'), url('images/portfolio/bibliotech.webp'), linear-gradient(135deg, var(--violet), var(--violet-deep)); background-size: cover, cover, cover, cover; background-position: center, center, center, center; background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; }
+  .pj-2 .project-thumb { background-image: url('images/portfolio/mary-stella-couture.jpg'), url('images/portfolio/mary-stella-couture.png'), url('images/portfolio/mary-stella-couture.webp'), linear-gradient(135deg, var(--gold), var(--gold-deep)); background-size: cover, cover, cover, cover; background-position: center, center, center, center; background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; }
+  .pj-3 .project-thumb { background-image: url('images/portfolio/celebrations-link.jpg'), url('images/portfolio/celebrations-link.png'), url('images/portfolio/celebrations-link.webp'), linear-gradient(135deg, var(--cyan), #005f54); background-size: cover, cover, cover, cover; background-position: center, center, center, center; background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; }
   .project-thumb span { filter: drop-shadow(0 4px 10px rgba(0,0,0,.25)); }
   .project-status { position: absolute; top: .8rem; right: .8rem; font-size: .64rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: .25rem .6rem; border-radius: 100px; background: rgba(255,255,255,.92); color: #170F2E; }
   .project-body { padding: 1.4rem 1.5rem 1.6rem; }
@@ -174,6 +175,7 @@
     .projects-header { flex-direction: column; align-items: flex-start; }
   }
 </style>
+<!-- VERCEL ANALYTICS : coller ici le script fourni par Vercel une fois Analytics activé (Dashboard Vercel > Projet > Analytics > Enable) -->
 </head>
 <body>
 
@@ -504,6 +506,10 @@
     <span><span data-fr="Fondé par " data-en="Founded by ">Fondé par </span><strong>Tsadok Adido</strong></span>
   </div>
 </footer>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Retour en haut de page">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 
 <script src="js/global.js"></script>
 </body>
