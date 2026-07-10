@@ -107,6 +107,25 @@
   .pc-cyan .post-thumb   { background: linear-gradient(150deg, var(--cyan-soft), var(--surface-2)); }
   .pc-violet .post-thumb { background: linear-gradient(150deg, rgba(91,43,196,.16), var(--surface-2)); }
 
+  /* Câblage image par article : tente .jpg puis .png puis .webp, retombe sur le dégradé de la
+     catégorie si absent. Dépose le fichier dans /images/blog/ avec le nom exact — apparition automatique.
+     ⚠️ Pour les 2 articles Tsk Tremplin : aucune photo de bénéficiaire réel sans consentement écrit signé
+     (voir règle de confidentialité du programme) — utiliser un visuel générique/abstrait uniquement. */
+  .post-thumb.pt-lancement-tremplin { background-image: url('../images/blog/lancement-tsk-tremplin.jpg'), url('../images/blog/lancement-tsk-tremplin.png'), url('../images/blog/lancement-tsk-tremplin.webp'), linear-gradient(150deg, var(--gold-pale), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-pourquoi-tremplin { background-image: url('../images/blog/pourquoi-tsk-tremplin.jpg'), url('../images/blog/pourquoi-tsk-tremplin.png'), url('../images/blog/pourquoi-tsk-tremplin.webp'), linear-gradient(150deg, var(--gold-pale), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-bourses-etudiants-africains { background-image: url('../images/blog/bourses-etudiants-africains.jpg'), url('../images/blog/bourses-etudiants-africains.png'), url('../images/blog/bourses-etudiants-africains.webp'), linear-gradient(150deg, var(--cyan-soft), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-cv-qui-retient-attention { background-image: url('../images/blog/cv-qui-retient-attention.jpg'), url('../images/blog/cv-qui-retient-attention.png'), url('../images/blog/cv-qui-retient-attention.webp'), linear-gradient(150deg, var(--cyan-soft), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-5-technologies-transforment-afrique { background-image: url('../images/blog/5-technologies-transforment-afrique.jpg'), url('../images/blog/5-technologies-transforment-afrique.png'), url('../images/blog/5-technologies-transforment-afrique.webp'), linear-gradient(150deg, rgba(91,43,196,.16), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-developpeur-debutant-2026 { background-image: url('../images/blog/developpeur-debutant-2026.jpg'), url('../images/blog/developpeur-debutant-2026.png'), url('../images/blog/developpeur-debutant-2026.webp'), linear-gradient(150deg, rgba(91,43,196,.16), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-protegez-business-en-ligne { background-image: url('../images/blog/protegez-business-en-ligne.jpg'), url('../images/blog/protegez-business-en-ligne.png'), url('../images/blog/protegez-business-en-ligne.webp'), linear-gradient(150deg, var(--gold-pale), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-5-reflexes-securiser-comptes { background-image: url('../images/blog/5-reflexes-securiser-comptes.jpg'), url('../images/blog/5-reflexes-securiser-comptes.png'), url('../images/blog/5-reflexes-securiser-comptes.webp'), linear-gradient(150deg, var(--gold-pale), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-identite-visuelle-forte { background-image: url('../images/blog/identite-visuelle-forte.jpg'), url('../images/blog/identite-visuelle-forte.png'), url('../images/blog/identite-visuelle-forte.webp'), linear-gradient(150deg, var(--cyan-soft), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-afrofuturisme-design-africain { background-image: url('../images/blog/afrofuturisme-design-africain.jpg'), url('../images/blog/afrofuturisme-design-africain.png'), url('../images/blog/afrofuturisme-design-africain.webp'), linear-gradient(150deg, var(--cyan-soft), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-booster-visibilite-petit-budget { background-image: url('../images/blog/booster-visibilite-petit-budget.jpg'), url('../images/blog/booster-visibilite-petit-budget.png'), url('../images/blog/booster-visibilite-petit-budget.webp'), linear-gradient(150deg, rgba(91,43,196,.16), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-site-web-ou-reseaux-sociaux { background-image: url('../images/blog/site-web-ou-reseaux-sociaux.jpg'), url('../images/blog/site-web-ou-reseaux-sociaux.png'), url('../images/blog/site-web-ou-reseaux-sociaux.webp'), linear-gradient(150deg, rgba(91,43,196,.16), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-revolution-digitale-afrique { background-image: url('../images/blog/revolution-digitale-afrique.jpg'), url('../images/blog/revolution-digitale-afrique.png'), url('../images/blog/revolution-digitale-afrique.webp'), linear-gradient(150deg, var(--gold-pale), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+  .post-thumb.pt-fintech-elearning-agritech { background-image: url('../images/blog/fintech-elearning-agritech.jpg'), url('../images/blog/fintech-elearning-agritech.png'), url('../images/blog/fintech-elearning-agritech.webp'), linear-gradient(150deg, var(--gold-pale), var(--surface-2)); background-size: cover,cover,cover,cover; background-position: center,center,center,center; background-repeat: no-repeat,no-repeat,no-repeat,no-repeat; }
+
   .post-content { padding: 1.2rem 1.3rem 1.4rem; display: flex; flex-direction: column; flex: 1; }
   .post-meta { display: flex; align-items: center; gap: .55rem; font-size: .68rem; font-weight: 600; color: var(--text-soft); margin-bottom: .6rem; flex-wrap: wrap; }
   .post-cat { padding: .16rem .55rem; border-radius: 100px; font-size: .64rem; font-weight: 700; }
@@ -274,7 +293,7 @@
 
         <a href="blog/lancement-tsk-tremplin.html" class="post-card card reveal" data-cat="actus" style="position:relative;">
           <span class="post-pin">📌 Tremplin</span>
-          <div class="post-thumb pc-gold"><span class="post-thumb-icon">🚀</span></div>
+          <div class="post-thumb pt-lancement-tremplin pc-gold"><span class="post-thumb-icon">🚀</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);" data-fr="Actus Tsk's" data-en="Tsk's News">Actus Tsk's</span><span>· 4 min</span></div>
             <h3 data-fr="Lancement officiel de Tsk Tremplin" data-en="Official launch of Tsk Tremplin">Lancement officiel de Tsk Tremplin</h3>
@@ -285,7 +304,7 @@
 
         <a href="blog/pourquoi-tsk-tremplin.html" class="post-card card reveal reveal-delay-1" data-cat="actus" style="position:relative;">
           <span class="post-pin">📌 Tremplin</span>
-          <div class="post-thumb pc-gold"><span class="post-thumb-icon">💡</span></div>
+          <div class="post-thumb pt-pourquoi-tremplin pc-gold"><span class="post-thumb-icon">💡</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);">Actus Tsk's</span><span>· 3 min</span></div>
             <h3 data-fr="Pourquoi Tsk Tremplin ? Le constat derrière le programme" data-en="Why Tsk Tremplin? The reasoning behind the program">Pourquoi Tsk Tremplin ? Le constat derrière le programme</h3>
@@ -295,7 +314,7 @@
         </a>
 
         <a href="blog/bourses-etudiants-africains.html" class="post-card card pc-cyan reveal" data-cat="opportunites">
-          <div class="post-thumb"><span class="post-thumb-icon">🎓</span></div>
+          <div class="post-thumb pt-bourses-etudiants-africains"><span class="post-thumb-icon">🎓</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat" data-fr="Opportunités" data-en="Opportunities">Opportunités</span><span>· 5 min</span></div>
             <h3 data-fr="5 bourses d'études ouvertes aux étudiants africains" data-en="5 scholarships open to African students">5 bourses d'études ouvertes aux étudiants africains</h3>
@@ -305,7 +324,7 @@
         </a>
 
         <a href="blog/cv-qui-retient-attention.html" class="post-card card pc-cyan reveal reveal-delay-1" data-cat="opportunites">
-          <div class="post-thumb"><span class="post-thumb-icon">📄</span></div>
+          <div class="post-thumb pt-cv-qui-retient-attention"><span class="post-thumb-icon">📄</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat">Opportunités</span><span>· 4 min</span></div>
             <h3 data-fr="Comment rédiger un CV qui retient l'attention des recruteurs" data-en="How to write a CV that catches recruiters' attention">Comment rédiger un CV qui retient l'attention des recruteurs</h3>
@@ -315,7 +334,7 @@
         </a>
 
         <a href="blog/5-technologies-transforment-afrique.html" class="post-card card pc-violet reveal" data-cat="tech">
-          <div class="post-thumb"><span class="post-thumb-icon">💻</span></div>
+          <div class="post-thumb pt-5-technologies-transforment-afrique"><span class="post-thumb-icon">💻</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat" data-fr="Tech & Dev" data-en="Tech & Dev">Tech & Dev</span><span>· 5 min</span></div>
             <h3 data-fr="5 technologies qui transforment l'Afrique" data-en="5 technologies transforming Africa">5 technologies qui transforment l'Afrique</h3>
@@ -325,7 +344,7 @@
         </a>
 
         <a href="blog/developpeur-debutant-2026.html" class="post-card card pc-violet reveal reveal-delay-1" data-cat="tech">
-          <div class="post-thumb"><span class="post-thumb-icon">🧑‍💻</span></div>
+          <div class="post-thumb pt-developpeur-debutant-2026"><span class="post-thumb-icon">🧑‍💻</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat">Tech & Dev</span><span>· 6 min</span></div>
             <h3 data-fr="Développeur débutant : par où commencer en 2026" data-en="Beginner developer: where to start in 2026">Développeur débutant : par où commencer en 2026</h3>
@@ -335,7 +354,7 @@
         </a>
 
         <a href="blog/protegez-business-en-ligne.html" class="post-card card pc-gold reveal" data-cat="cyber">
-          <div class="post-thumb"><span class="post-thumb-icon">🔐</span></div>
+          <div class="post-thumb pt-protegez-business-en-ligne"><span class="post-thumb-icon">🔐</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</span><span>· 6 min</span></div>
             <h3 data-fr="Cybersécurité : protégez votre business en ligne" data-en="Cybersecurity: protect your online business">Cybersécurité : protégez votre business en ligne</h3>
@@ -345,7 +364,7 @@
         </a>
 
         <a href="blog/5-reflexes-securiser-comptes.html" class="post-card card pc-gold reveal reveal-delay-1" data-cat="cyber">
-          <div class="post-thumb"><span class="post-thumb-icon">🛡️</span></div>
+          <div class="post-thumb pt-5-reflexes-securiser-comptes"><span class="post-thumb-icon">🛡️</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);">Cybersécurité</span><span>· 4 min</span></div>
             <h3 data-fr="5 réflexes pour sécuriser vos comptes en ligne" data-en="5 habits to secure your online accounts">5 réflexes pour sécuriser vos comptes en ligne</h3>
@@ -355,7 +374,7 @@
         </a>
 
         <a href="blog/identite-visuelle-forte.html" class="post-card card pc-cyan reveal" data-cat="design">
-          <div class="post-thumb"><span class="post-thumb-icon">🎨</span></div>
+          <div class="post-thumb pt-identite-visuelle-forte"><span class="post-thumb-icon">🎨</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat" data-fr="Design & Marque" data-en="Design & Brand">Design & Marque</span><span>· 4 min</span></div>
             <h3 data-fr="Pourquoi une identité visuelle forte change tout" data-en="Why a strong visual identity changes everything">Pourquoi une identité visuelle forte change tout</h3>
@@ -365,7 +384,7 @@
         </a>
 
         <a href="blog/afrofuturisme-design-africain.html" class="post-card card pc-cyan reveal reveal-delay-1" data-cat="design">
-          <div class="post-thumb"><span class="post-thumb-icon">🌀</span></div>
+          <div class="post-thumb pt-afrofuturisme-design-africain"><span class="post-thumb-icon">🌀</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat">Design & Marque</span><span>· 4 min</span></div>
             <h3 data-fr="Afro-futurisme : le design africain à l'ère du digital" data-en="Afrofuturism: African design in the digital age">Afro-futurisme : le design africain à l'ère du digital</h3>
@@ -375,7 +394,7 @@
         </a>
 
         <a href="blog/booster-visibilite-petit-budget.html" class="post-card card pc-violet reveal" data-cat="business">
-          <div class="post-thumb"><span class="post-thumb-icon">📈</span></div>
+          <div class="post-thumb pt-booster-visibilite-petit-budget"><span class="post-thumb-icon">📈</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat" data-fr="Business & Digital" data-en="Business & Digital">Business & Digital</span><span>· 5 min</span></div>
             <h3 data-fr="Booster sa visibilité en ligne avec un petit budget" data-en="Boosting your online visibility on a small budget">Booster sa visibilité en ligne avec un petit budget</h3>
@@ -385,7 +404,7 @@
         </a>
 
         <a href="blog/site-web-ou-reseaux-sociaux.html" class="post-card card pc-violet reveal reveal-delay-1" data-cat="business">
-          <div class="post-thumb"><span class="post-thumb-icon">🧭</span></div>
+          <div class="post-thumb pt-site-web-ou-reseaux-sociaux"><span class="post-thumb-icon">🧭</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat">Business & Digital</span><span>· 5 min</span></div>
             <h3 data-fr="Site web ou réseaux sociaux : par où commencer" data-en="Website or social media: where to start">Site web ou réseaux sociaux : par où commencer</h3>
@@ -395,7 +414,7 @@
         </a>
 
         <a href="blog/revolution-digitale-afrique.html" class="post-card card pc-gold reveal" data-cat="afrique">
-          <div class="post-thumb"><span class="post-thumb-icon">🌍</span></div>
+          <div class="post-thumb pt-revolution-digitale-afrique"><span class="post-thumb-icon">🌍</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);" data-fr="Afrique Digitale" data-en="Digital Africa">Afrique Digitale</span><span>· 6 min</span></div>
             <h3 data-fr="L'Afrique est-elle prête pour la révolution digitale ?" data-en="Is Africa ready for the digital revolution?">L'Afrique est-elle prête pour la révolution digitale ?</h3>
@@ -405,7 +424,7 @@
         </a>
 
         <a href="blog/fintech-elearning-agritech.html" class="post-card card pc-gold reveal reveal-delay-1" data-cat="afrique">
-          <div class="post-thumb"><span class="post-thumb-icon">📱</span></div>
+          <div class="post-thumb pt-fintech-elearning-agritech"><span class="post-thumb-icon">📱</span></div>
           <div class="post-content">
             <div class="post-meta"><span class="post-cat" style="background:var(--gold-pale);color:var(--gold-deep);">Afrique Digitale</span><span>· 5 min</span></div>
             <h3 data-fr="Fintech, e-learning, agritech : les secteurs qui explosent" data-en="Fintech, e-learning, agritech: the booming sectors">Fintech, e-learning, agritech : les secteurs qui explosent</h3>
