@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Quand on a un budget limité, quelle priorité donner à sa présence digitale ? Notre grille de décision pour choisir entre site web et réseaux sociaux."/>
+  <title>Site web ou réseaux sociaux : par où commencer — Blog Tsk's Tech Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"/>
+  <link rel="stylesheet" href="../../css/global.css"/>
+
+  <link rel="canonical" href="https://flashtsk17.github.io/tsks-tech-services/pages/blog/site-web-ou-reseaux-sociaux.html"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
+  <link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png"/>
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Tsk's Tech Services"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta property="og:title" content="Site web ou réseaux sociaux : par où commencer — Blog Tsk's Tech Services"/>
+  <meta property="og:description" content="Quand on a un budget limité, quelle priorité donner à sa présence digitale ? Notre grille de décision pour choisir entre site web et réseaux sociaux."/>
+  <meta property="og:url" content="https://flashtsk17.github.io/tsks-tech-services/pages/blog/site-web-ou-reseaux-sociaux.html"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <style>
+    .page-hero {
+      min-height: 40vh; display: flex; align-items: flex-end;
+      padding: calc(var(--nav-h) + 3.5rem) 4rem 3.5rem;
+      position: relative; overflow: hidden;
+      background: linear-gradient(160deg, rgba(91,43,196,.18), var(--bg) 60%);
+    }
+    .page-hero-inner { max-width: 780px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+    .page-breadcrumb { display: flex; gap: .5rem; flex-wrap: wrap; font-family: var(--font); font-size: .7rem; letter-spacing: .1em; color: var(--text-soft); margin-bottom: 1.4rem; }
+    .page-breadcrumb a { color: var(--cyan); }
+    .page-breadcrumb span { color: var(--border); }
+    .article-cat {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-family: var(--font); font-size: .68rem; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--violet-strong); background: rgba(91,43,196,.15); border: 1px solid rgba(155,91,255,.35);
+      padding: .35rem .9rem; border-radius: 100px; margin-bottom: 1.2rem;
+    }
+    .page-hero h1 { font-family: var(--font); font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.2; margin-bottom: 1rem; }
+    .article-meta { display: flex; gap: 1rem; flex-wrap: wrap; font-family: var(--font); font-size: .75rem; color: var(--text-muted); }
+
+    .article-section { padding: 4rem 4rem var(--section-pad); }
+    .article-body { max-width: 720px; margin: 0 auto; }
+    .article-lead { font-size: 1.1rem; color: var(--text); line-height: 1.75; font-weight: 300; margin-bottom: 2.2rem; padding-bottom: 2.2rem; border-bottom: 1px solid var(--border); }
+    .article-body h2 { font-family: var(--font); font-weight: 800; font-size: 1.2rem; color: var(--violet-strong); margin: 2rem 0 .8rem; }
+    .article-body p { color: var(--text-muted); line-height: 1.85; font-size: .96rem; margin-bottom: 1rem; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+
+    .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.4rem 0 1.8rem; }
+    .decision-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.4rem; }
+    .decision-card h3 { font-family: var(--font); font-size: 1rem; font-weight: 700; color: var(--gold); margin-bottom: .8rem; }
+    .decision-card ul { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+    .decision-card li { font-size: .85rem; color: var(--text-muted); display: flex; gap: .5rem; }
+    .decision-card li::before { content: '→'; color: var(--cyan); flex-shrink: 0; }
+
+    .article-cta { margin-top: 3rem; padding: 2.2rem; background: linear-gradient(135deg, rgba(91,43,196,.15), rgba(13,9,32,.6)); border: 1px solid rgba(155,91,255,.3); border-radius: 14px; text-align: center; }
+    .article-cta h3 { font-family: var(--font); font-size: 1.15rem; font-weight: 800; margin-bottom: .6rem; }
+    .article-cta p { color: var(--text-muted); font-size: .9rem; margin-bottom: 1.4rem; }
+    .article-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .article-nav { max-width: 720px; margin: 3rem auto 0; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .article-nav a { font-family: var(--font); font-size: .78rem; color: var(--cyan); display: flex; align-items: center; gap: .5rem; }
+
+    @media (max-width: 768px) {
+      .page-hero { padding: calc(var(--nav-h) + 1.5rem) 1.5rem 2.5rem; }
+      .article-section { padding: 2.5rem 1.5rem 3rem; }
+      .decision-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true"/>
+
+  <nav class="nav" id="nav">
+    <a href="../../index.html" class="nav-logo">
+      <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+        <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+        <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+      </svg>
+      <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="../../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+      <li><a href="../about.html" data-fr="À propos" data-en="About">À propos</a></li>
+      <li><a href="../services.html" data-fr="Services" data-en="Services">Services</a></li>
+      <li><a href="../portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+      <li><a href="../blog.html" class="active" data-fr="Blog" data-en="Blog">Blog</a></li>
+      <li><a href="../contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn" data-lang="fr" type="button">FR</button>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Basculer le thème clair / sombre">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a href="../contact.html" class="nav-cta"><span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span></a>
+      <label for="nav-toggle" class="nav-burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
+    </div>
+  </nav>
+
+  <div class="nav-drawer-scrim"></div>
+  <div class="nav-drawer">
+    <a href="../../index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+    <a href="../about.html" data-fr="À propos" data-en="About">À propos</a>
+    <a href="../services.html" data-fr="Services" data-en="Services">Services</a>
+    <a href="../portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a>
+    <a href="../blog.html" class="active" data-fr="Blog" data-en="Blog">Blog</a>
+    <a href="../contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+    <div class="lang-toggle" style="margin-top:.4rem;">
+      <button class="lang-btn" data-lang="fr" type="button">FR</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+    <a href="../contact.html" class="btn btn-primary"><span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span></a>
+  </div>
+
+  <!-- ARTICLE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb">
+        <a href="../../index.html">Accueil</a><span>/</span>
+        <a href="../blog.html">Blog</a><span>/</span>
+        <span data-fr="Site web ou réseaux sociaux" data-en="Website or social media">Site web ou réseaux sociaux</span>
+      </div>
+      <span class="article-cat" data-fr="📈 Business & Digital" data-en="📈 Business & Digital">📈 Business & Digital</span>
+      <h1 data-fr="Site web ou réseaux sociaux : par où commencer" data-en="Website or social media: where to start">Site web ou réseaux sociaux : par où commencer</h1>
+      <div class="article-meta">
+        <span data-fr="Guide de décision" data-en="Decision guide">Guide de décision</span>
+        <span>· 5 min</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <section class="article-section">
+    <div class="article-body">
+
+      <p class="article-lead" data-fr="C'est l'une des questions qu'on nous pose le plus souvent : avec un budget limité, faut-il investir dans un site web ou se concentrer sur les réseaux sociaux ? La réponse dépend surtout de votre activité et de vos objectifs." data-en="It's one of the questions we get asked most often: with a limited budget, should you invest in a website or focus on social media? The answer mostly depends on your business and your goals.">
+        C'est l'une des questions qu'on nous pose le plus souvent : avec un budget limité, faut-il investir dans un site web ou se concentrer sur les réseaux sociaux ? La réponse dépend surtout de votre activité et de vos objectifs.
+      </p>
+
+      <h2 data-fr="Ce que chacun fait mieux" data-en="What each one does best">Ce que chacun fait mieux</h2>
+      <div class="decision-grid">
+        <div class="decision-card">
+          <h3 data-fr="🌐 Le site web" data-en="🌐 The website">🌐 Le site web</h3>
+          <ul>
+            <li data-fr="Vous appartient — pas soumis aux changements d'algorithme." data-en="Belongs to you — not subject to algorithm changes.">Vous appartient — pas soumis aux changements d'algorithme.</li>
+            <li data-fr="Renforce la crédibilité auprès des clients B2B et institutions." data-en="Strengthens credibility with B2B clients and institutions.">Renforce la crédibilité auprès des clients B2B et institutions.</li>
+            <li data-fr="Référencement Google sur le long terme." data-en="Long-term Google search visibility.">Référencement Google sur le long terme.</li>
+            <li data-fr="Présente une offre complète, sans limite de format." data-en="Presents a complete offer, with no format limits.">Présente une offre complète, sans limite de format.</li>
+          </ul>
+        </div>
+        <div class="decision-card">
+          <h3 data-fr="📱 Les réseaux sociaux" data-en="📱 Social media">📱 Les réseaux sociaux</h3>
+          <ul>
+            <li data-fr="Rapide à mettre en place, gratuit au démarrage." data-en="Quick to set up, free to start.">Rapide à mettre en place, gratuit au démarrage.</li>
+            <li data-fr="Idéal pour toucher une audience locale rapidement." data-en="Ideal for reaching a local audience quickly.">Idéal pour toucher une audience locale rapidement.</li>
+            <li data-fr="Permet l'interaction directe avec les clients." data-en="Allows direct interaction with clients.">Permet l'interaction directe avec les clients.</li>
+            <li data-fr="Excellent pour le commerce et les produits visuels." data-en="Excellent for commerce and visual products.">Excellent pour le commerce et les produits visuels.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 data-fr="Notre recommandation, dans l'ordre" data-en="Our recommendation, in order">Notre recommandation, dans l'ordre</h2>
+      <p data-fr="Si votre budget est vraiment limité, commencez toujours par une présence solide sur les réseaux sociaux — c'est gratuit et rapide à activer. Mais dès que votre activité génère des revenus réguliers, un site web devient un investissement rentable : il travaille pour vous 24h/24, ne dépend d'aucun algorithme, et donne une image professionnelle qu'aucune page sociale ne peut égaler seule." data-en="If your budget is really tight, always start with a solid social media presence — it's free and quick to activate. But as soon as your business generates regular revenue, a website becomes a worthwhile investment: it works for you around the clock, doesn't depend on any algorithm, and gives a professional image no social page can match on its own.">
+        Si votre budget est vraiment limité, commencez toujours par une présence solide sur les réseaux sociaux — c'est gratuit et rapide à activer. Mais dès que votre activité génère des revenus réguliers, un site web devient un investissement rentable : il travaille pour vous 24h/24, ne dépend d'aucun algorithme, et donne une image professionnelle qu'aucune page sociale ne peut égaler seule.
+      </p>
+      <p data-fr="Idéalement, les deux se complètent : le site web comme vitrine de référence, les réseaux sociaux comme canal de conversation et de découverte." data-en="Ideally, the two complement each other: the website as your reference showcase, social media as your conversation and discovery channel.">
+        Idéalement, les deux se complètent : le site web comme vitrine de référence, les réseaux sociaux comme canal de conversation et de découverte.
+      </p>
+
+      <div class="article-cta">
+        <h3 data-fr="Vous hésitez sur la bonne priorité pour votre activité ?" data-en="Not sure what's the right priority for your business?">Vous hésitez sur la bonne priorité pour votre activité ?</h3>
+        <p data-fr="Parlons de votre situation précise — nous vous aidons à choisir la bonne étape, adaptée à votre budget et vos objectifs réels." data-en="Let's talk about your specific situation — we'll help you choose the right step, tailored to your real budget and goals.">
+          Parlons de votre situation précise — nous vous aidons à choisir la bonne étape, adaptée à votre budget et vos objectifs réels.
+        </p>
+        <div class="article-cta-actions">
+          <a href="../contact.html" class="btn btn-primary"><span data-fr="Discutons-en" data-en="Let's talk">Discutons-en</span> →</a>
+          <a href="../services.html" class="btn btn-outline" data-fr="Voir nos services" data-en="See our services">Voir nos services</a>
+        </div>
+      </div>
+
+      <div class="article-nav">
+        <a href="booster-visibilite-petit-budget.html">← <span data-fr="Booster sa visibilité, petit budget" data-en="Boost visibility, small budget">Booster sa visibilité, petit budget</span></a>
+        <a href="../blog.html"><span data-fr="Retour au blog" data-en="Back to blog">Retour au blog</span> →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">
+          <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+            <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+            <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+          </svg>
+          <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+        </a>
+        <p data-fr="Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception." data-en="Tech studio based in Cotonou, Benin. We make technology accessible to everyone, without exception.">
+          Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception.
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/tsadok-adido" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="https://github.com/FlashTsk17" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.4 9.4 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
+        <ul>
+          <li><a href="../../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+          <li><a href="../about.html" data-fr="À propos" data-en="About">À propos</a></li>
+          <li><a href="../services.html" data-fr="Services" data-en="Services">Services</a></li>
+          <li><a href="../portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+          <li><a href="../blog.html" data-fr="Blog" data-en="Blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Services" data-en="Services">Services</h4>
+        <ul>
+          <li><a href="../services.html" data-fr="Développement Web & Mobile" data-en="Web & Mobile Dev">Développement Web & Mobile</a></li>
+          <li><a href="../services.html" data-fr="Design & Identité" data-en="Design & Identity">Design & Identité</a></li>
+          <li><a href="../services.html" data-fr="Marketing Digital" data-en="Digital Marketing">Marketing Digital</a></li>
+          <li><a href="../services.html" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+        <ul>
+          <li><a href="mailto:adidomahukpeou@gmail.com">📧 adidomahukpeou@gmail.com</a></li>
+          <li><a href="tel:+22901522711198">📱 +229 01 52 27 11 98</a></li>
+          <li><a href="../contact.html" data-fr="📍 Cotonou, Bénin" data-en="📍 Cotonou, Benin">📍 Cotonou, Bénin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-fr="© 2026 Tsk's Tech Services — Tous droits réservés" data-en="© 2026 Tsk's Tech Services — All rights reserved">© 2026 Tsk's Tech Services — Tous droits réservés</span>
+      <a href="../mentions-legales.html" data-fr="Mentions légales & Confidentialité" data-en="Legal Notice & Privacy">Mentions légales & Confidentialité</a>
+      <span><span data-fr="Fondé par " data-en="Founded by ">Fondé par </span><strong>Tsadok Adido</strong></span>
+    </div>
+  </footer>
+
+  <script src="../../js/global.js"></script>
+</body>
+</html>

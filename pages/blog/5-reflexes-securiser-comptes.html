@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mots de passe, double authentification, mises à jour : les gestes simples qui font la différence pour sécuriser vos comptes en ligne."/>
+  <title>5 réflexes pour sécuriser vos comptes en ligne — Blog Tsk's Tech Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"/>
+  <link rel="stylesheet" href="../../css/global.css"/>
+
+  <link rel="canonical" href="https://flashtsk17.github.io/tsks-tech-services/pages/blog/5-reflexes-securiser-comptes.html"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
+  <link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png"/>
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Tsk's Tech Services"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta property="og:title" content="5 réflexes pour sécuriser vos comptes en ligne — Blog Tsk's Tech Services"/>
+  <meta property="og:description" content="Mots de passe, double authentification, mises à jour : les gestes simples qui font la différence pour sécuriser vos comptes en ligne."/>
+  <meta property="og:url" content="https://flashtsk17.github.io/tsks-tech-services/pages/blog/5-reflexes-securiser-comptes.html"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <style>
+    .page-hero {
+      min-height: 40vh; display: flex; align-items: flex-end;
+      padding: calc(var(--nav-h) + 3.5rem) 4rem 3.5rem;
+      position: relative; overflow: hidden;
+      background: linear-gradient(160deg, rgba(240,165,0,.16), var(--bg) 60%);
+    }
+    .page-hero-inner { max-width: 780px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+    .page-breadcrumb { display: flex; gap: .5rem; flex-wrap: wrap; font-family: var(--font); font-size: .7rem; letter-spacing: .1em; color: var(--text-soft); margin-bottom: 1.4rem; }
+    .page-breadcrumb a { color: var(--cyan); }
+    .page-breadcrumb span { color: var(--border); }
+    .article-cat {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-family: var(--font); font-size: .68rem; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--gold); background: rgba(240,165,0,.1); border: 1px solid rgba(240,165,0,.3);
+      padding: .35rem .9rem; border-radius: 100px; margin-bottom: 1.2rem;
+    }
+    .page-hero h1 { font-family: var(--font); font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.2; margin-bottom: 1rem; }
+    .article-meta { display: flex; gap: 1rem; flex-wrap: wrap; font-family: var(--font); font-size: .75rem; color: var(--text-muted); }
+
+    .article-section { padding: 4rem 4rem var(--section-pad); }
+    .article-body { max-width: 720px; margin: 0 auto; }
+    .article-lead { font-size: 1.1rem; color: var(--text); line-height: 1.75; font-weight: 300; margin-bottom: 2.2rem; padding-bottom: 2.2rem; border-bottom: 1px solid var(--border); }
+    .article-body p { color: var(--text-muted); line-height: 1.85; font-size: .96rem; margin-bottom: 1rem; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+
+    .reflex-item { margin: 1.8rem 0; padding-left: 1.6rem; border-left: 3px solid var(--gold); }
+    .reflex-item .num { font-family: var(--font); font-size: 1.7rem; color: rgba(240,165,0,.3); line-height: 1; }
+    .reflex-item h2 { font-family: var(--font); font-weight: 800; font-size: 1.1rem; color: var(--text); margin: .3rem 0 .6rem; }
+    .reflex-item p { font-size: .93rem; margin-bottom: 0; }
+
+    .article-cta { margin-top: 3rem; padding: 2.2rem; background: linear-gradient(135deg, rgba(91,43,196,.15), rgba(13,9,32,.6)); border: 1px solid rgba(155,91,255,.3); border-radius: 14px; text-align: center; }
+    .article-cta h3 { font-family: var(--font); font-size: 1.15rem; font-weight: 800; margin-bottom: .6rem; }
+    .article-cta p { color: var(--text-muted); font-size: .9rem; margin-bottom: 1.4rem; }
+    .article-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .article-nav { max-width: 720px; margin: 3rem auto 0; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .article-nav a { font-family: var(--font); font-size: .78rem; color: var(--cyan); display: flex; align-items: center; gap: .5rem; }
+
+    @media (max-width: 768px) {
+      .page-hero { padding: calc(var(--nav-h) + 1.5rem) 1.5rem 2.5rem; }
+      .article-section { padding: 2.5rem 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true"/>
+
+  <nav class="nav" id="nav">
+    <a href="../../index.html" class="nav-logo">
+      <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+        <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+        <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+      </svg>
+      <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="../../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+      <li><a href="../about.html" data-fr="À propos" data-en="About">À propos</a></li>
+      <li><a href="../services.html" data-fr="Services" data-en="Services">Services</a></li>
+      <li><a href="../portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+      <li><a href="../blog.html" class="active" data-fr="Blog" data-en="Blog">Blog</a></li>
+      <li><a href="../contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn" data-lang="fr" type="button">FR</button>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Basculer le thème clair / sombre">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a href="../contact.html" class="nav-cta"><span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span></a>
+      <label for="nav-toggle" class="nav-burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
+    </div>
+  </nav>
+
+  <div class="nav-drawer-scrim"></div>
+  <div class="nav-drawer">
+    <a href="../../index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+    <a href="../about.html" data-fr="À propos" data-en="About">À propos</a>
+    <a href="../services.html" data-fr="Services" data-en="Services">Services</a>
+    <a href="../portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a>
+    <a href="../blog.html" class="active" data-fr="Blog" data-en="Blog">Blog</a>
+    <a href="../contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+    <div class="lang-toggle" style="margin-top:.4rem;">
+      <button class="lang-btn" data-lang="fr" type="button">FR</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+    <a href="../contact.html" class="btn btn-primary"><span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span></a>
+  </div>
+
+  <!-- ARTICLE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb">
+        <a href="../../index.html">Accueil</a><span>/</span>
+        <a href="../blog.html">Blog</a><span>/</span>
+        <span data-fr="Sécuriser vos comptes" data-en="Secure your accounts">Sécuriser vos comptes</span>
+      </div>
+      <span class="article-cat" data-fr="🔐 Cybersécurité" data-en="🔐 Cybersecurity">🔐 Cybersécurité</span>
+      <h1 data-fr="5 réflexes pour sécuriser vos comptes en ligne" data-en="5 habits to secure your online accounts">5 réflexes pour sécuriser vos comptes en ligne</h1>
+      <div class="article-meta">
+        <span data-fr="Conseils pratiques" data-en="Practical tips">Conseils pratiques</span>
+        <span>· 4 min</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <section class="article-section">
+    <div class="article-body">
+
+      <p class="article-lead" data-fr="Pas besoin d'être expert en informatique pour bien se protéger en ligne. Cinq réflexes simples, appliqués régulièrement, réduisent drastiquement le risque de piratage." data-en="You don't need to be a tech expert to stay safe online. Five simple habits, applied consistently, drastically reduce the risk of being hacked.">
+        Pas besoin d'être expert en informatique pour bien se protéger en ligne. Cinq réflexes simples, appliqués régulièrement, réduisent drastiquement le risque de piratage.
+      </p>
+
+      <div class="reflex-item">
+        <div class="num">01</div>
+        <h2 data-fr="Un mot de passe unique par compte" data-en="A unique password per account">Un mot de passe unique par compte</h2>
+        <p data-fr="Réutiliser le même mot de passe partout signifie qu'une seule fuite de données compromet tous vos comptes. Un gestionnaire de mots de passe (souvent gratuit) résout ce problème sans effort de mémorisation." data-en="Reusing the same password everywhere means one single data leak compromises all your accounts. A password manager (often free) solves this without any memorization effort.">
+          Réutiliser le même mot de passe partout signifie qu'une seule fuite de données compromet tous vos comptes. Un gestionnaire de mots de passe (souvent gratuit) résout ce problème sans effort de mémorisation.
+        </p>
+      </div>
+
+      <div class="reflex-item">
+        <div class="num">02</div>
+        <h2 data-fr="La double authentification, partout où c'est possible" data-en="Two-factor authentication, wherever possible">La double authentification, partout où c'est possible</h2>
+        <p data-fr="Même si votre mot de passe est volé, la double authentification (code SMS ou application dédiée) empêche l'accès à votre compte. C'est la protection la plus efficace pour l'effort le plus faible." data-en="Even if your password is stolen, two-factor authentication (SMS code or dedicated app) blocks access to your account. It's the most effective protection for the least effort.">
+          Même si votre mot de passe est volé, la double authentification (code SMS ou application dédiée) empêche l'accès à votre compte. C'est la protection la plus efficace pour l'effort le plus faible.
+        </p>
+      </div>
+
+      <div class="reflex-item">
+        <div class="num">03</div>
+        <h2 data-fr="Vérifiez avant de cliquer" data-en="Check before you click">Vérifiez avant de cliquer</h2>
+        <p data-fr="Un message urgent qui demande vos identifiants, un lien qui semble presque familier, un expéditeur inconnu : prenez toujours quelques secondes pour vérifier avant d'agir. La plupart des piratages commencent par un clic précipité." data-en="An urgent message asking for your credentials, a link that looks almost familiar, an unknown sender: always take a few seconds to verify before acting. Most hacks start with a hasty click.">
+          Un message urgent qui demande vos identifiants, un lien qui semble presque familier, un expéditeur inconnu : prenez toujours quelques secondes pour vérifier avant d'agir. La plupart des piratages commencent par un clic précipité.
+        </p>
+      </div>
+
+      <div class="reflex-item">
+        <div class="num">04</div>
+        <h2 data-fr="Mettez à jour vos appareils et applications" data-en="Update your devices and apps">Mettez à jour vos appareils et applications</h2>
+        <p data-fr="Les mises à jour corrigent souvent des failles de sécurité déjà exploitées par des pirates. Repousser une mise à jour, c'est laisser une porte ouverte inutilement." data-en="Updates often patch security flaws already exploited by hackers. Postponing an update means leaving a door needlessly open.">
+          Les mises à jour corrigent souvent des failles de sécurité déjà exploitées par des pirates. Repousser une mise à jour, c'est laisser une porte ouverte inutilement.
+        </p>
+      </div>
+
+      <div class="reflex-item">
+        <div class="num">05</div>
+        <h2 data-fr="Sauvegardez régulièrement vos données importantes" data-en="Regularly back up your important data">Sauvegardez régulièrement vos données importantes</h2>
+        <p data-fr="En cas de piratage ou de panne, une sauvegarde récente (cloud ou disque externe) peut vous éviter de tout perdre. C'est le filet de sécurité qu'on néglige... jusqu'au jour où on en a besoin." data-en="In case of a hack or failure, a recent backup (cloud or external drive) can save you from losing everything. It's the safety net people neglect... until the day they need it.">
+          En cas de piratage ou de panne, une sauvegarde récente (cloud ou disque externe) peut vous éviter de tout perdre. C'est le filet de sécurité qu'on néglige... jusqu'au jour où on en a besoin.
+        </p>
+      </div>
+
+      <p data-fr="Aucun de ces cinq réflexes ne demande de compétence technique poussée — seulement de la régularité. C'est souvent ce qui fait toute la différence." data-en="None of these five habits require advanced technical skill — just consistency. That's often what makes all the difference.">
+        Aucun de ces cinq réflexes ne demande de compétence technique poussée — seulement de la régularité. C'est souvent ce qui fait toute la différence.
+      </p>
+
+      <div class="article-cta">
+        <h3 data-fr="Besoin d'aller plus loin ?" data-en="Need to go further?">Besoin d'aller plus loin ?</h3>
+        <p data-fr="Nous accompagnons aussi les PME et institutions dans la sécurisation complète de leur présence digitale." data-en="We also help SMEs and institutions fully secure their digital presence.">
+          Nous accompagnons aussi les PME et institutions dans la sécurisation complète de leur présence digitale.
+        </p>
+        <div class="article-cta-actions">
+          <a href="../contact.html" class="btn btn-primary"><span data-fr="Discutons-en" data-en="Let's talk">Discutons-en</span> →</a>
+          <a href="../services.html" class="btn btn-outline" data-fr="Voir nos services" data-en="See our services">Voir nos services</a>
+        </div>
+      </div>
+
+      <div class="article-nav">
+        <a href="protegez-business-en-ligne.html">← <span data-fr="Protégez votre business en ligne" data-en="Protect your online business">Protégez votre business en ligne</span></a>
+        <a href="../blog.html"><span data-fr="Retour au blog" data-en="Back to blog">Retour au blog</span> →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">
+          <svg class="nav-logo-mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M50.76 18.57 L50.76 37.43 L37.43 50.76 L18.57 50.76 L5.24 37.43 L5.24 18.57 L18.57 5.24 L37.43 5.24 Z" fill="none" style="stroke:var(--violet)" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M14.56 24.64 L41.44 24.64 L41.44 30.8 L14.56 30.8 Z" style="fill:var(--gold)"/>
+            <path d="M23.8 30.8 L32.2 30.8 L32.2 41.44 L23.8 41.44 Z" style="fill:var(--gold)"/>
+            <polygon points="46.92,12.72 44.39,13.83 43.28,16.36 42.17,13.83 39.64,12.72 42.17,11.61 43.28,9.08 44.39,11.61" style="fill:var(--cyan)"/>
+          </svg>
+          <span class="nav-logo-text"><span class="sub">TSK'S</span><span class="brand">Tech <span>Services</span></span></span>
+        </a>
+        <p data-fr="Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception." data-en="Tech studio based in Cotonou, Benin. We make technology accessible to everyone, without exception.">
+          Studio tech basé à Cotonou, Bénin. Nous rendons la technologie accessible à tous, sans exception.
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/tskstechservices" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/tsadok-adido" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="https://github.com/FlashTsk17" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.4 9.4 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
+        <ul>
+          <li><a href="../../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+          <li><a href="../about.html" data-fr="À propos" data-en="About">À propos</a></li>
+          <li><a href="../services.html" data-fr="Services" data-en="Services">Services</a></li>
+          <li><a href="../portfolio.html" data-fr="Réalisations" data-en="Work">Réalisations</a></li>
+          <li><a href="../blog.html" data-fr="Blog" data-en="Blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Services" data-en="Services">Services</h4>
+        <ul>
+          <li><a href="../services.html" data-fr="Développement Web & Mobile" data-en="Web & Mobile Dev">Développement Web & Mobile</a></li>
+          <li><a href="../services.html" data-fr="Design & Identité" data-en="Design & Identity">Design & Identité</a></li>
+          <li><a href="../services.html" data-fr="Marketing Digital" data-en="Digital Marketing">Marketing Digital</a></li>
+          <li><a href="../services.html" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+        <ul>
+          <li><a href="mailto:adidomahukpeou@gmail.com">📧 adidomahukpeou@gmail.com</a></li>
+          <li><a href="tel:+22901522711198">📱 +229 01 52 27 11 98</a></li>
+          <li><a href="../contact.html" data-fr="📍 Cotonou, Bénin" data-en="📍 Cotonou, Benin">📍 Cotonou, Bénin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-fr="© 2026 Tsk's Tech Services — Tous droits réservés" data-en="© 2026 Tsk's Tech Services — All rights reserved">© 2026 Tsk's Tech Services — Tous droits réservés</span>
+      <a href="../mentions-legales.html" data-fr="Mentions légales & Confidentialité" data-en="Legal Notice & Privacy">Mentions légales & Confidentialité</a>
+      <span><span data-fr="Fondé par " data-en="Founded by ">Fondé par </span><strong>Tsadok Adido</strong></span>
+    </div>
+  </footer>
+
+  <script src="../../js/global.js"></script>
+</body>
+</html>
