@@ -78,6 +78,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+  /* ── BOUTON RETOUR EN HAUT ── */
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    const toggleBackToTop = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = scrollable > 0 ? window.scrollY / scrollable : 0;
+      backToTop.classList.toggle('visible', percent > 0.66);
+    };
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    toggleBackToTop();
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   /* ── COMPTEURS ANIMÉS ── */
   function animCounter(el) {
     const target = parseInt(el.dataset.target, 10);
